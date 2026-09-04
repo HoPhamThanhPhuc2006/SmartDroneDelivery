@@ -1,2 +1,37 @@
 \chapter{TỔNG QUAN VỀ ĐỀ TÀI}
-% Thành viên 1 viết nội dung tại đây
+
+\section{Lý do chọn đề tài}
+Dịch vụ giao hàng tận nơi hiện nay đang phát triển rất nhanh để phục vụ nhu cầu mua sắm trực tuyến của người dân. Tuy nhiên, việc sử dụng xe máy để giao hàng trong các khu vực đô thị gặp nhiều khó khăn như hay bị tắc đường, tốn nhiều thời gian và gây ô nhiễm môi trường. Việc giao các đơn hàng nhỏ, nhẹ hoặc các vật tư y tế cần gấp trong điều kiện kẹt xe thường không đảm bảo được thời gian.
+
+Mô hình giao hàng bằng thiết bị bay không người lái (Drone) là một hướng đi mới giúp giải quyết vấn đề này. Việc dùng Drone giúp tự động hóa khâu vận chuyển, tránh được các điểm ùn tắc mặt đất, từ đó giảm thời gian giao hàng và tiết kiệm chi phí nhân công. 
+
+Vì những lý do trên, nhóm quyết định chọn đề tài \textbf{"Xây dựng hệ thống quản lý và điều hành giao hàng bằng Drone (SmartDroneDelivery)"} làm đồ án môn học.
+
+\section{Mục tiêu nghiên cứu}
+Đề tài hướng đến việc xây dựng một hệ thống phần mềm hoàn chỉnh để quản lý quy trình giao hàng bằng Drone, bao gồm các mục tiêu cụ thể:
+\begin{itemize}
+    \item Xây dựng hệ thống máy chủ (Backend API) bằng ASP.NET Core và CSDL PostgreSQL để quản lý thông tin người dùng, đơn hàng, danh sách Drone và các trạm sạc.
+    \item Xây dựng trang web quản trị (Web Portal) bằng ReactJS giúp người điều hành theo dõi vị trí Drone trên bản đồ theo thời gian thực và xử lý đơn hàng.
+    \item Xây dựng ứng dụng di động (Mobile App) bằng Flutter cho khách hàng đặt đơn, theo dõi tuyến đường di chuyển của Drone và nhận thông báo khi hàng đến nơi.
+    \item Tích hợp các chức năng phụ trợ như tính toán thời gian giao hàng dự kiến (ETA) và tự động trả lời thắc mắc của khách hàng.
+\end{itemize}
+
+\section{Phạm vi của đồ án}
+\begin{itemize}
+    \item \textbf{Về mặt chức năng:} Hệ thống tập trung xử lý luồng giao hàng chặng cuối cho các đơn hàng nhẹ trong phạm vi bán kính hoạt động của trạm thử nghiệm.
+    \item \textbf{Về mặt công nghệ:}
+    \begin{itemize}
+        \item Backend: Sử dụng framework ASP.NET Core 8.0, CSDL PostgreSQL và thư viện SignalR để truyền dữ liệu thời gian thực.
+        \item Web quản trị: Sử dụng ReactJS và thư viện Leaflet để hiện bản đồ.
+        \item App di động: Sử dụng Flutter hỗ trợ nền tảng Android.
+        \item Đóng gói hệ thống: Sử dụng Docker để triển khai các dịch vụ.
+    \end{itemize}
+\end{itemize}
+
+\section{Phương pháp thực hiện}
+Để hoàn thành đồ án đúng tiến độ, nhóm chia công việc và thực hiện theo các bước:
+\begin{enumerate}
+    \item Phân tích yêu cầu bài toán và thiết kế sơ đồ CSDL, sơ đồ luồng nghiệp vụ.
+    \item Sử dụng Git và GitHub để quản lý mã nguồn, giúp các thành viên làm việc độc lập mà không bị đè code của nhau.
+    \item Chia nhỏ dự án thành các thư mục riêng (`docs/` chứa bài viết báo cáo, `src/` chứa code ứng dụng) để nhóm vừa viết tài liệu vừa lập trình song song.
+\end{enumerate}
