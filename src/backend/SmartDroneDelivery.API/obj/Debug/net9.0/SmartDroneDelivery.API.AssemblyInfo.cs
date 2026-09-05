@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SmartDroneDelivery.API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f727e5d8e2542740162456dab5270d034d5240cd")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d8907a88c4bc5623dfdcab00600ca1e3ae6b772a")]
 [assembly: System.Reflection.AssemblyProductAttribute("SmartDroneDelivery.API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SmartDroneDelivery.API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
