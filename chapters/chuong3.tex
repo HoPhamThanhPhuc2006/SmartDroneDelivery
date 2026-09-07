@@ -1,1 +1,214 @@
-﻿ 
+﻿\chapter{THIẾT KẾ KIẾN TRÚC PHẦN MỀM VÀ CƠ SỞ DỮ LIỆU}
+
+\section{Giới thiệu kiến trúc hệ thống}
+Nền tảng Quản lý Giao hàng bằng Drone Thông minh được thiết kế nhằm mục tiêu tự động hóa toàn bộ quy trình vận hành giao nhận hàng hóa. Hệ thống chịu trách nhiệm điều phối các thiết bị bay không người lái, tối ưu hóa hoạt động tại các trạm đáp và nâng cao độ chính xác trong công tác quản lý vận chuyển.
+
+\subsection{Mô hình kiến trúc Clean Architecture}
+Hệ thống phía máy chủ (Backend) được xây dựng trên nền tảng ASP.NET Core Web API và áp dụng mô hình Clean Architecture. Việc phân chia hệ thống thành các tầng độc lập giúp đảm bảo tính mô-đun, dễ dàng mở rộng và thuận tiện trong quá trình kiểm thử phần mềm.
+
+\noindent\textbf{1. Tầng Domain (Domain Layer):} Tầng cốt lõi chứa các đối tượng nghiệp vụ chính của hệ thống như người dùng, đơn hàng, thiết bị drone và trạm đáp. Các quy tắc nghiệp vụ cơ bản được định nghĩa hoàn toàn độc lập tại đây mà không phụ thuộc vào bất kỳ thư viện hay công nghệ lưu trữ dữ liệu nào bên ngoài.
+
+\noindent\textbf{2. Tầng Application (Application Layer):} Tầng ứng dụng chịu trách nhiệm xử lý các luồng công việc cụ thể bao gồm tạo đơn hàng, phê duyệt đơn, điều phối thiết bị và tính toán thời gian giao hàng dự kiến. Hệ thống áp dụng mẫu thiết kế CQRS kết hợp thư viện MediatR để quản lý và xử lý các lệnh cũng như truy vấn dữ liệu một cách hiệu quả.
+
+\noindent\textbf{3. Tầng Infrastructure (Tầng hạ tầng):} Tầng hạ tầng đảm nhận việc triển khai thực tế các giao diện được khai báo ở tầng ứng dụng. Dữ liệu hệ thống được quản lý thông qua hệ quản trị cơ sở dữ liệu PostgreSQL với Entity Framework Core. Các tệp tin hình ảnh được lưu trữ trên hệ thống MinIO Object Storage, trong khi các thông tin theo dõi thời gian thực được truyền tải qua giao thức SignalR.
+
+\noindent\textbf{4. Tầng Presentation (Tầng hiển thị):} Lớp giao diện cung cấp các cổng kết nối RESTful API mã hóa dữ liệu theo chuẩn JSON. Cổng API này phục vụ trực tiếp cho ứng dụng quản trị trên nền tảng Web xây dựng bằng ReactJS và ứng dụng di động dành cho người dùng phát triển trên Flutter.
+
+\section{Thiết kế cơ sở dữ liệu PostgreSQL}
+Cơ sở dữ liệu của hệ thống được chuẩn hóa theo dạng chuẩn 3NF trên hệ quản trị PostgreSQL nhằm đảm bảo tính toàn vẹn dữ liệu và tối ưu hiệu năng truy vấn. Các bảng dữ liệu chính trong hệ thống được chi tiết hóa như sau.
+
+\subsection{Chi tiết các bảng dữ liệu}
+
+\noindent\textbf{1. Bảng Users (Người dùng):} Lưu trữ thông tin tài khoản, thông tin liên lạc và quyền hạn của người dùng trong hệ thống.
+\begin{table}[htbp]
+	\centering
+	\begin{tabular}{|l|l|l|}
+		\hline
+		\textbf{Thuộc tính} & \textbf{Kiểu dữ liệu} & \textbf{Mô tả / Ràng buộc} \\ \hline
+		user\_id & UUID & Khóa chính \\ \hline
+		full\_name & VARCHAR(100) & Họ và tên người dùng \\ \hline
+		email & VARCHAR(100) & Địa chỉ email (Duy nhất) \\ \hline
+		phone\_number & VARCHAR(20) & Số điện thoại \\ \hline
+		password\_hash & TEXT & Mật khẩu đã mã hóa \\ \hline
+		role & VARCHAR(30) & Vai trò người dùng \\ \hline
+		created\_at & TIMESTAMP & Thời gian tạo tài khoản \\ \hline
+	\end{tabular}
+	\caption{Cấu trúc bảng Users}
+\end{table}
+
+\noindent\textbf{2. Bảng Packages (Kiện hàng):} Quản lý các thông số vật lý của kiện hàng cần vận chuyển bao gồm kích thước, trọng lượng và các đặc tính bảo quản.
+\begin{table}[htbp]
+	\centering
+	\begin{tabular}{|l|l|l|}
+		\hline
+		\textbf{Thuộc tính} & \textbf{Kiểu dữ liệu} & \textbf{Mô tả / Ràng buộc} \\ \hline
+		package\_id & UUID & Khóa chính \\ \hline
+		weight\_kg & DECIMAL(5,2) & Trọng lượng kiện hàng (kg) \\ \hline
+		length\_cm & DECIMAL(5,2) & Chiều dài (cm) \\ \hline
+		width\_cm & DECIMAL(5,2) & Chiều rộng (cm) \\ \hline
+		height\_cm & DECIMAL(5,2) & Chiều cao (cm) \\ \hline
+		is\_fragile & BOOLEAN & Cờ đánh dấu hàng dễ vỡ \\ \hline
+		image\_url & TEXT & Đường dẫn ảnh kiện hàng \\ \hline
+	\end{tabular}
+	\caption{Cấu trúc bảng Packages}
+\end{table}
+
+\noindent\textbf{3. Bảng Landing Stations (Trạm đáp):} Quản lý vị trí tọa độ địa lý, sức chứa và trạng thái hoạt động của các trạm cất/hạ cánh.
+\begin{table}[htbp]
+	\centering
+	\begin{tabular}{|l|l|l|}
+		\hline
+		\textbf{Thuộc tính} & \textbf{Kiểu dữ liệu} & \textbf{Mô tả / Ràng buộc} \\ \hline
+		station\_id & UUID & Khóa chính \\ \hline
+		station\_name & VARCHAR(100) & Tên trạm đáp \\ \hline
+		address\_text & TEXT & Địa chỉ chi tiết \\ \hline
+		latitude & DECIMAL(10,7) & Vĩ độ GPS \\ \hline
+		longitude & DECIMAL(10,7) & Kinh độ GPS \\ \hline
+		max\_capacity & INTEGER & Sức chứa Drone tối đa \\ \hline
+		status & VARCHAR(30) & Trạng thái hoạt động trạm \\ \hline
+	\end{tabular}
+	\caption{Cấu trúc bảng Landing Stations}
+\end{table}
+
+\noindent\textbf{4. Bảng Drones (Thiết bị bay):} Quản lý thông số kỹ thuật của từng drone, mức dung lượng pin hiện tại và tải trọng thiết kế.
+\begin{table}[htbp]
+	\centering
+	\begin{tabular}{|l|l|l|}
+		\hline
+		\textbf{Thuộc tính} & \textbf{Kiểu dữ liệu} & \textbf{Mô tả / Ràng buộc} \\ \hline
+		drone\_id & UUID & Khóa chính \\ \hline
+		model\_code & VARCHAR(50) & Mã dòng thiết bị \\ \hline
+		max\_payload\_kg & DECIMAL(5,2) & Tải trọng tối đa (kg) \\ \hline
+		battery\_capacity\_pct & INTEGER & Dung lượng pin (\%) \\ \hline
+		current\_station\_id & UUID & Khóa ngoại tham chiếu Trạm đáp \\ \hline
+		status & VARCHAR(30) & Trạng thái hoạt động Drone \\ \hline
+	\end{tabular}
+	\caption{Cấu trúc bảng Drones}
+\end{table}
+
+\noindent\textbf{5. Bảng Delivery Orders (Đơn hàng giao):} Lưu trữ thông tin chi tiết các đơn giao hàng do người dùng khởi tạo trên hệ thống.
+\begin{table}[htbp]
+	\centering
+	\begin{tabular}{|l|l|l|}
+		\hline
+		\textbf{Thuộc tính} & \textbf{Kiểu dữ liệu} & \textbf{Mô tả / Ràng buộc} \\ \hline
+		order\_id & UUID & Khóa chính \\ \hline
+		customer\_id & UUID & Khóa ngoại tham chiếu Người dùng \\ \hline
+		package\_id & UUID & Khóa ngoại tham chiếu Kiện hàng \\ \hline
+		pickup\_station\_id & UUID & Khóa ngoại tham chiếu Trạm lấy hàng \\ \hline
+		destination\_address & TEXT & Địa chỉ điểm giao \\ \hline
+		dest\_latitude & DECIMAL(10,7) & Vĩ độ điểm giao \\ \hline
+		dest\_longitude & DECIMAL(10,7) & Kinh độ điểm giao \\ \hline
+		status & VARCHAR(30) & Trạng thái đơn hàng \\ \hline
+		created\_at & TIMESTAMP & Thời gian khởi tạo \\ \hline
+	\end{tabular}
+	\caption{Cấu trúc bảng Delivery Orders}
+\end{table}
+
+\noindent\textbf{6. Bảng Deliveries (Chuyến giao hàng):} Ghi nhận quá trình phân công thiết bị bay thực hiện nhiệm vụ cho một đơn hàng cụ thể.
+\begin{table}[htbp]
+	\centering
+	\begin{tabular}{|l|l|l|}
+		\hline
+		\textbf{Thuộc tính} & \textbf{Kiểu dữ liệu} & \textbf{Mô tả / Ràng buộc} \\ \hline
+		delivery\_id & UUID & Khóa chính \\ \hline
+		order\_id & UUID & Khóa ngoại tham chiếu Đơn hàng \\ \hline
+		drone\_id & UUID & Khóa ngoại tham chiếu Drone \\ \hline
+		dispatcher\_id & UUID & Khóa ngoại tham chiếu Điều phối viên \\ \hline
+		estimated\_eta\_minutes & INTEGER & Thời gian giao dự kiến (phút) \\ \hline
+		confirmation\_code & VARCHAR(10) & Mã xác nhận giao hàng OTP \\ \hline
+		start\_time & TIMESTAMP & Thời điểm cất cánh \\ \hline
+		end\_time & TIMESTAMP & Thời điểm hoàn thành \\ \hline
+	\end{tabular}
+	\caption{Cấu trúc bảng Deliveries}
+\end{table}
+
+\noindent\textbf{7. Bảng Tracking Logs (Nhật ký hành trình):} Ghi lại lịch sử tọa độ GPS, độ cao và tốc độ di chuyển của drone theo thời gian thực.
+\begin{table}[htbp]
+	\centering
+	\begin{tabular}{|l|l|l|}
+		\hline
+		\textbf{Thuộc tính} & \textbf{Kiểu dữ liệu} & \textbf{Mô tả / Ràng buộc} \\ \hline
+		log\_id & BIGSERIAL & Khóa chính tự tăng \\ \hline
+		delivery\_id & UUID & Khóa ngoại tham chiếu Chuyến giao \\ \hline
+		current\_latitude & DECIMAL(10,7) & Vĩ độ hiện tại \\ \hline
+		current\_longitude & DECIMAL(10,7) & Kinh độ hiện tại \\ \hline
+		current\_altitude\_m & DECIMAL(6,2) & Độ cao hiện tại (mét) \\ \hline
+		battery\_remaining\_pct & INTEGER & Mức pin còn lại (\%) \\ \hline
+		speed\_kmh & DECIMAL(5,2) & Tốc độ bay (km/h) \\ \hline
+		timestamp & TIMESTAMP & Thời điểm ghi nhật ký \\ \hline
+	\end{tabular}
+	\caption{Cấu trúc bảng Tracking Logs}
+\end{table}
+
+\section{Mô tả luồng vận hành nghiệp vụ}
+Quy trình giao vận bằng drone được thực hiện qua các bước tuần tự. Ban đầu, khách hàng sử dụng ứng dụng di động để gửi yêu cầu đặt đơn kèm vị trí tọa độ điểm nhận và thông tin kiện hàng. Sau khi tiếp nhận, hệ thống gửi dữ liệu đến mô-đun tính toán để xác định khoảng cách, độ an toàn luồng bay và dự báo thời gian giao hàng.
+
+Khi điều phối viên duyệt đơn hàng, hệ thống tự động quét và lựa chọn drone phù hợp tại trạm gần nhất dựa trên tiêu chí dung lượng pin và trọng tải cho phép. Sau khi nhận lệnh, drone bắt đầu hành trình và liên tục gửi thông số tọa độ GPS cùng trạng thái thiết bị về hệ thống máy chủ. Khi drone tới điểm giao, người dùng thực hiện xác thực mã OTP trên ứng dụng để nhận hàng. Hoàn tất quy trình, thiết bị quay trở lại trạm đáp ban đầu.
+
+\section{Thiết kế giao diện lập trình ứng dụng RESTful API}
+Các giao tiếp giữa ứng dụng client và máy chủ backend được thực hiện qua cổng API chuẩn RESTful, yêu cầu xác thực bằng chuỗi JWT Bearer Token.
+
+\subsection{Danh sách các cổng kết nối chính}
+\begin{table}[htbp]
+	\centering
+	\begin{tabular}{|l|l|l|}
+		\hline
+		\textbf{Phương thức} & \textbf{Đường dẫn API} & \textbf{Chức năng nghiệp vụ} \\ \hline
+		POST & /api/v1/auth/login & Đăng nhập và nhận Token \\ \hline
+		POST & /api/v1/orders & Đặt đơn giao hàng mới \\ \hline
+		GET & /api/v1/orders/\{id\} & Truy vấn thông tin đơn hàng \\ \hline
+		PATCH & /api/v1/orders/\{id\}/approve & Phê duyệt đơn hàng \\ \hline
+		GET & /api/v1/stations & Lấy danh sách các trạm đáp \\ \hline
+		GET & /api/v1/drones/available & Tìm kiếm drone đang khả dụng \\ \hline
+		POST & /api/v1/deliveries/dispatch & Phân công drone thực hiện chuyến \\ \hline
+		POST & /api/v1/deliveries/\{id\}/confirm & Xác nhận hoàn thành giao hàng \\ \hline
+	\end{tabular}
+	\caption{Danh sách RESTful API Endpoints}
+\end{table}
+
+\subsection{Đặc tả định dạng dữ liệu truyền nhận}
+
+\noindent Dưới đây là ví dụ cấu trúc dữ liệu gửi lên máy chủ khi người dùng khởi tạo đơn hàng mới thông qua phương thức POST tới cổng /api/v1/orders:
+
+\begin{verbatim}
+{
+  "pickup_station_id": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+  "destination_address": "Khu Cong nghe cao, Quan 9, TP.HCM",
+  "dest_latitude": 10.854881,
+  "dest_longitude": 106.785023,
+  "package": {
+    "weight_kg": 1.8,
+    "length_cm": 20.0,
+    "width_cm": 15.0,
+    "height_cm": 10.0,
+    "is_fragile": false
+  }
+}
+\end{verbatim}
+
+\noindent Kết quả phản hồi từ máy chủ báo tạo đơn thành công trả về mã 201 Created có cấu trúc như sau:
+
+\begin{verbatim}
+{
+  "success": true,
+  "order_id": "c71a3d9b-8e21-4f1b-b72e-8301132a03e1",
+  "status": "Pending",
+  "created_at": "2026-09-08T01:30:00Z",
+  "message": "Delivery order created successfully."
+}
+\end{verbatim}
+
+\noindent Dữ liệu cập nhật vị trí GPS trực tuyến của thiết bị gửi về hệ thống được định dạng như sau:
+
+\begin{verbatim}
+{
+  "delivery_id": "f82b11a4-92c2-421d-9321-7290ad11bc82",
+  "drone_id": "d1109a5f-4221-4b1a-8212-98442211aa09",
+  "current_latitude": 10.852104,
+  "current_longitude": 106.781200,
+  "altitude_m": 45.5,
+  "speed_kmh": 32.0,
+  "battery_pct": 82
+}
+\end{verbatim}

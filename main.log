@@ -1,15 +1,15 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.8.22)  6 SEP 2026 22:05
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.9.4)  8 SEP 2026 01:23
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**e:/tkcsdl/SmartDroneDelivery/main.tex
-(e:/tkcsdl/SmartDroneDelivery/main.tex
+**c:/Users/admin/Downloads/SmartDroneDelivery-main/SmartDroneDelivery-main/main.tex
+(c:/Users/admin/Downloads/SmartDroneDelivery-main/SmartDroneDelivery-main/main.tex
 LaTeX2e <2025-11-01>
 L3 programming layer <2025-12-24>
-(D:\Miktex\tex/latex/base\report.cls
+(C:\Program Files\MiKTeX\tex/latex/base\report.cls
 Document Class: report 2025/01/22 v1.4n Standard LaTeX document class
-(D:\Miktex\tex/latex/base\size12.clo
+(C:\Program Files\MiKTeX\tex/latex/base\size12.clo
 File: size12.clo 2025/01/22 v1.4n Standard LaTeX file (size option)
 )
 \c@part=\count275
@@ -24,17 +24,17 @@ File: size12.clo 2025/01/22 v1.4n Standard LaTeX file (size option)
 \abovecaptionskip=\skip49
 \belowcaptionskip=\skip50
 \bibindent=\dimen148
-) (D:\Miktex\tex/latex/vntex\vietnam.sty
+) (C:\Program Files\MiKTeX\tex/latex/vntex\vietnam.sty
 Package: vietnam 2009/07/12 v1.3 support for Vietnamese
- (D:\Miktex\tex/latex/base\ifthen.sty
+ (C:\Program Files\MiKTeX\tex/latex/base\ifthen.sty
 Package: ifthen 2024/03/16 v1.1e Standard LaTeX ifthen package (DPC)
-) (D:\Miktex\tex/latex/base\fontenc.sty
+) (C:\Program Files\MiKTeX\tex/latex/base\fontenc.sty
 Package: fontenc 2025/07/18 v2.1d Standard LaTeX package
- (D:\Miktex\tex/latex/vntex\t5enc.def
+ (C:\Program Files\MiKTeX\tex/latex/vntex\t5enc.def
 File: t5enc.def 2006/11/21 v1.4 Vietnamese T5 encoding
 Now handling font encoding T5 ...
 ... processing UTF-8 mapping file for font encoding T5
- (D:\Miktex\tex/latex/vntex\t5enc.dfu
+ (C:\Program Files\MiKTeX\tex/latex/vntex\t5enc.dfu
 File: t5enc.dfu 2006/08/19 v1.1 UTF8 support for Vietnamese
    defining Unicode char U+00AB (decimal 171)
    defining Unicode char U+00BB (decimal 187)
@@ -189,15 +189,15 @@ File: t5enc.dfu 2006/08/19 v1.1 UTF8 support for Vietnamese
    defining Unicode char U+2423 (decimal 9251)
 ))
 LaTeX Font Info:    Trying to load font information for T5+cmr on input line 116.
- (D:\Miktex\tex/latex/vntex\t5cmr.fd
+ (C:\Program Files\MiKTeX\tex/latex/vntex\t5cmr.fd
 File: t5cmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
-)) (D:\Miktex\tex/latex/base\inputenc.sty
+)) (C:\Program Files\MiKTeX\tex/latex/base\inputenc.sty
 Package: inputenc 2024/02/08 v1.3d Input encoding file
 \inpenc@prehook=\toks17
 \inpenc@posthook=\toks18
-) (D:\Miktex\tex/latex/vntex\vncaps.tex
+) (C:\Program Files\MiKTeX\tex/latex/vntex\vncaps.tex
 File: vncaps.tex 2006/06/07 v1.1 Captions in Vietnamese
-)) (D:\Miktex\tex/latex/l3backend\l3backend-pdftex.def
+)) (C:\Program Files\MiKTeX\tex/latex/l3backend\l3backend-pdftex.def
 File: l3backend-pdftex.def 2025-10-09 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count284
 ) (main.aux)
@@ -225,340 +225,270 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <7> on input line 9.
  [1
 
-{C:/Users/baong/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}] (chapters/chuong1.tex
+{C:/Users/admin/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}] (chapters/chuong1.tex
 Ch\uhorn \ohorn ng 1.
 [1
 
 ] [2]) (chapters/chuong2.tex [3]
 Ch\uhorn \ohorn ng 2.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 11.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 11.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 11.
-
-Underfull \hbox (badness 2237) in paragraph at lines 23--23
-[]\T5/cmr/m/n/12 Theo dãi ^^_ìn h ng
- []
-
-
-Underfull \hbox (badness 3482) in paragraph at lines 25--25
-[]\T5/cmr/m/n/12 ×îc t½nh thíi gian
- []
-
-chapters/chuong2.tex:36: Undefined control sequence.
-l.36 \FloatBarrier
-                  
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
 [4
 
-] [5]
-chapters/chuong2.tex:52: Undefined control sequence.
-l.52 \FloatBarrier
-                  
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
+]
+Overfull \hbox (7.48248pt too wide) in paragraph at lines 51--51
+[]\T5/cmr/bx/n/17.28 Mæ h¼nh hâa quy tr¼nh nghi»p vö (BPMN) 
+ []
 
+[5]) (chapters/chuong3.tex [6] [7]
+Ch\uhorn \ohorn ng 3.
+[8
 
-LaTeX Warning: Reference `fig:usecase-tongquan' on page 6 undefined on input line 56.
+]
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 22.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 22.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 22.
 
-chapters/chuong2.tex:60: Undefined control sequence.
-l.60     \includegraphics
-                         [width=0.8\textwidth]{images/usecase-tongquan.png}
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-chapters/chuong2.tex:60: Missing number, treated as zero.
-<to be read again> 
-                   ]
-l.60     \includegraphics[width=0.8\textwidth]
-                                              {images/usecase-tongquan.png}
-A number should have been here; I inserted `0'.
-(If you can't figure out why I needed to see a number,
-look up `weird error' in the index to The TeXbook.)
-
-chapters/chuong2.tex:60: Illegal unit of measure (pt inserted).
-<to be read again> 
-                   ]
-l.60     \includegraphics[width=0.8\textwidth]
-                                              {images/usecase-tongquan.png}
-Dimensions can be in units of em, ex, in, pt, pc,
-cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
-I'll assume that you meant to say pt, for printer's points.
-To recover gracefully from this error, it's best to
-delete the erroneous units; e.g., type `2' to delete
-two letters. (See Chapter 27 of The TeXbook.)
-
-chapters/chuong2.tex:65: Undefined control sequence.
-l.65 \FloatBarrier
-                  
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-chapters/chuong2.tex:75: Undefined control sequence.
-l.75 \FloatBarrier
-                  
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 90--90
-[]\T5/cmr/m/n/12 ^^^i·u ki»n ti¶n
+Overfull \hbox (75.88518pt too wide) in paragraph at lines 22--33
+ [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 92--92
-[]\T5/cmr/m/n/12 Luçng sü ki»n
+Overfull \hbox (61.8845pt too wide) in paragraph at lines 72--83
+ [][] 
  []
 
-chapters/chuong2.tex:107: Undefined control sequence.
-l.107 \FloatBarrier
-                   
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
+[9]
+Overfull \hbox (18.73822pt too wide) in paragraph at lines 89--98
+ [][] 
+ []
 
-chapters/chuong2.tex:115: Undefined control sequence.
-l.115     \includegraphics
-                          [width=0.8\textwidth]{images/bpmn-dat-don-hang.png}
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
 
-chapters/chuong2.tex:115: Missing number, treated as zero.
-<to be read again> 
-                   ]
-l.115     \includegraphics[width=0.8\textwidth]
-                                               {images/bpmn-dat-don-hang.png}
-A number should have been here; I inserted `0'.
-(If you can't figure out why I needed to see a number,
-look up `weird error' in the index to The TeXbook.)
+Overfull \hbox (27.71086pt too wide) in paragraph at lines 104--113
+ [][] 
+ []
 
-chapters/chuong2.tex:115: Illegal unit of measure (pt inserted).
-<to be read again> 
-                   ]
-l.115     \includegraphics[width=0.8\textwidth]
-                                               {images/bpmn-dat-don-hang.png}
-Dimensions can be in units of em, ex, in, pt, pc,
-cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
-I'll assume that you meant to say pt, for printer's points.
-To recover gracefully from this error, it's best to
-delete the erroneous units; e.g., type `2' to delete
-two letters. (See Chapter 27 of The TeXbook.)
 
-chapters/chuong2.tex:120: Undefined control sequence.
-l.120 \FloatBarrier
-                   
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
+Overfull \hbox (14.90845pt too wide) in paragraph at lines 116--116
+[]\T5/cmr/bx/n/17.28 Thi¸t k¸ REST-ful API Spec-i-fi-ca-tion (Swag-
+ []
 
-chapters/chuong2.tex:126: Undefined control sequence.
-l.126     \includegraphics
-                          [width=0.8\textwidth]{images/bpmn-phan-cong-shippe...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
 
-chapters/chuong2.tex:126: Missing number, treated as zero.
-<to be read again> 
-                   ]
-l.126     \includegraphics[width=0.8\textwidth]
-                                               {images/bpmn-phan-cong-shippe...
-A number should have been here; I inserted `0'.
-(If you can't figure out why I needed to see a number,
-look up `weird error' in the index to The TeXbook.)
+Overfull \hbox (20.98329pt too wide) in paragraph at lines 122--133
+ [][] 
+ []
 
-chapters/chuong2.tex:126: Illegal unit of measure (pt inserted).
-<to be read again> 
-                   ]
-l.126     \includegraphics[width=0.8\textwidth]
-                                               {images/bpmn-phan-cong-shippe...
-Dimensions can be in units of em, ex, in, pt, pc,
-cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
-I'll assume that you meant to say pt, for printer's points.
-To recover gracefully from this error, it's best to
-delete the erroneous units; e.g., type `2' to delete
-two letters. (See Chapter 27 of The TeXbook.)
 
-chapters/chuong2.tex:131: Undefined control sequence.
-l.131 \FloatBarrier
-                   
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
+chapters/chuong3.tex:139: LaTeX Error: Environment lstlisting undefined.
 
-chapters/chuong2.tex:137: Undefined control sequence.
-l.137     \includegraphics
-                          [width=0.8\textwidth]{images/bpmn-giao-hang.png}
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.139 \begin{lstlisting}
+                        [language=json]
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
 
-chapters/chuong2.tex:137: Missing number, treated as zero.
-<to be read again> 
-                   ]
-l.137     \includegraphics[width=0.8\textwidth]
-                                               {images/bpmn-giao-hang.png}
-A number should have been here; I inserted `0'.
-(If you can't figure out why I needed to see a number,
-look up `weird error' in the index to The TeXbook.)
+chapters/chuong3.tex:142: Missing $ inserted.
+<inserted text> 
+                $
+l.142   "pickup_
+                station_id": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
 
-chapters/chuong2.tex:137: Illegal unit of measure (pt inserted).
-<to be read again> 
-                   ]
-l.137     \includegraphics[width=0.8\textwidth]
-                                               {images/bpmn-giao-hang.png}
-Dimensions can be in units of em, ex, in, pt, pc,
-cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
-I'll assume that you meant to say pt, for printer's points.
-To recover gracefully from this error, it's best to
-delete the erroneous units; e.g., type `2' to delete
-two letters. (See Chapter 27 of The TeXbook.)
+chapters/chuong3.tex:150: Extra }, or forgotten $.
+l.150 }
+       
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
 
-[6] [7]
-chapters/chuong2.tex:142: Undefined control sequence.
-l.142 \FloatBarrier
-                   
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
+chapters/chuong3.tex:151: Missing $ inserted.
+<inserted text> 
+                $
+l.151 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
 
-chapters/chuong2.tex:148: Undefined control sequence.
-l.148     \includegraphics
-                          [width=0.8\textwidth]{images/bpmn-chatbot.png}
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
 
-chapters/chuong2.tex:148: Missing number, treated as zero.
-<to be read again> 
-                   ]
-l.148     \includegraphics[width=0.8\textwidth]
-                                               {images/bpmn-chatbot.png}
-A number should have been here; I inserted `0'.
-(If you can't figure out why I needed to see a number,
-look up `weird error' in the index to The TeXbook.)
+Overfull \hbox (136.93599pt too wide) in paragraph at lines 138--151
+\T5/cmr/m/n/12 quest Body  "pickup$[]\OML/cmm/m/it/12 tation[]d\OT1/cmr/m/n/12 " : "3\OML/cmm/m/it/12 fa\OT1/cmr/m/n/12 85\OML/cmm/m/it/12 f\OT1/cmr/m/n/12 64 \OMS/cmsy/m/n/12 ^^@ \OT1/cmr/m/n/12 5717 \OMS/cmsy/m/n/12 ^^@ \OT1/cmr/m/n/12 4562 \OMS/cmsy/m/n/12 ^^@ \OML/cmm/m/it/12 b\OT1/cmr/m/n/12 3\OML/cmm/m/it/12 fc \OMS/cmsy/m/n/12 ^^@ \OT1/cmr/m/n/12 2\OML/cmm/m/it/12 c\OT1/cmr/m/n/12 963\OML/cmm/m/it/12 f\OT1/cmr/m/n/12 66\OML/cmm/m/it/12 afa\OT1/cmr/m/n/12 6"\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 "\OML/cmm/m/it/12 destination[]ddress\OT1/cmr/m/n/12 " :
+ []
 
-chapters/chuong2.tex:148: Illegal unit of measure (pt inserted).
-<to be read again> 
-                   ]
-l.148     \includegraphics[width=0.8\textwidth]
-                                               {images/bpmn-chatbot.png}
-Dimensions can be in units of em, ex, in, pt, pc,
-cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
-I'll assume that you meant to say pt, for printer's points.
-To recover gracefully from this error, it's best to
-delete the erroneous units; e.g., type `2' to delete
-two letters. (See Chapter 27 of The TeXbook.)
 
-chapters/chuong2.tex:153: Undefined control sequence.
-l.153 \FloatBarrier
-                   
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
+Overfull \hbox (248.68054pt too wide) in paragraph at lines 138--151
+\OT1/cmr/m/n/12 "\OML/cmm/m/it/12 KhuCongnghecao; Quan\OT1/cmr/m/n/12 9\OML/cmm/m/it/12 ; TP:HCM\OT1/cmr/m/n/12 "\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 "\OML/cmm/m/it/12 package\OT1/cmr/m/n/12 " : []$ 
+ []
 
-chapters/chuong2.tex:159: Undefined control sequence.
-l.159     \includegraphics
-                          [width=0.8\textwidth]{images/bpmn-thong-ke.png}
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
+[10] [11]
+chapters/chuong3.tex:154: Missing $ inserted.
+<inserted text> 
+                $
+l.154   "order_
+               id": "c71a3d9b-8e21-4f1b-b72e-8301132a03e1",
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
 
-chapters/chuong2.tex:159: Missing number, treated as zero.
-<to be read again> 
-                   ]
-l.159     \includegraphics[width=0.8\textwidth]
-                                               {images/bpmn-thong-ke.png}
-A number should have been here; I inserted `0'.
-(If you can't figure out why I needed to see a number,
-look up `weird error' in the index to The TeXbook.)
+chapters/chuong3.tex:157: Extra }, or forgotten $.
+l.157 }
+       
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
 
-chapters/chuong2.tex:159: Illegal unit of measure (pt inserted).
-<to be read again> 
-                   ]
-l.159     \includegraphics[width=0.8\textwidth]
-                                               {images/bpmn-thong-ke.png}
-Dimensions can be in units of em, ex, in, pt, pc,
-cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
-I'll assume that you meant to say pt, for printer's points.
-To recover gracefully from this error, it's best to
-delete the erroneous units; e.g., type `2' to delete
-two letters. (See Chapter 27 of The TeXbook.)
 
-chapters/chuong2.tex:164: Undefined control sequence.
-l.164 \FloatBarrier
-                   
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
+chapters/chuong3.tex:158: LaTeX Error: \begin{document} ended by \end{lstlisting}.
 
-) (chapters/chuong3.tex) (chapters/chuong4.tex) (chapters/chuong5.tex) [8] (main.aux)
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.158 \end{lstlisting}
+                      
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+chapters/chuong3.tex:158: Missing $ inserted.
+<inserted text> 
+                $
+l.158 \end{lstlisting}
+                      
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+chapters/chuong3.tex:158: Missing } inserted.
+<inserted text> 
+                }
+l.158 \end{lstlisting}
+                      
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+chapters/chuong3.tex:158: Missing } inserted.
+<inserted text> 
+                }
+l.158 \end{lstlisting}
+                      
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+
+Overfull \hbox (68.07991pt too wide) in paragraph at lines 152--159
+\OT1/cmr/m/n/12 8301132\OML/cmm/m/it/12 a\OT1/cmr/m/n/12 03\OML/cmm/m/it/12 e\OT1/cmr/m/n/12 1"\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 "\OML/cmm/m/it/12 status\OT1/cmr/m/n/12 " : "\OML/cmm/m/it/12 Pending\OT1/cmr/m/n/12 "\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 "\OML/cmm/m/it/12 message\OT1/cmr/m/n/12 " : "\OML/cmm/m/it/12 Deliveryordercreatedsuccessfully:\OT1/cmr/m/n/12 "$ 
+ []
+
+
+chapters/chuong3.tex:161: LaTeX Error: Environment lstlisting undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.161 \begin{lstlisting}
+                        [language=json]
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+chapters/chuong3.tex:164: Missing $ inserted.
+<inserted text> 
+                $
+l.164   "pickup_
+                station_id": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+chapters/chuong3.tex:168: Extra }, or forgotten $.
+l.168 }
+       
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+
+chapters/chuong3.tex:169: LaTeX Error: \begin{document} ended by \end{lstlisting}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.169 \end{lstlisting}
+                      
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+chapters/chuong3.tex:169: Missing $ inserted.
+<inserted text> 
+                $
+l.169 \end{lstlisting}
+                      
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+chapters/chuong3.tex:169: Missing } inserted.
+<inserted text> 
+                }
+l.169 \end{lstlisting}
+                      
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+) (chapters/chuong4.tex
+Overfull \hbox (13.28787pt too wide) in paragraph at lines 160--1
+\T5/cmr/bx/n/12 h ng) \T5/cmr/m/n/12 [lan-guage=json] // Re-sponse (200 OK)  "pickup$[]\OML/cmm/m/it/12 tation[]d\OT1/cmr/m/n/12 " : "3\OML/cmm/m/it/12 fa\OT1/cmr/m/n/12 85\OML/cmm/m/it/12 f\OT1/cmr/m/n/12 64 \OMS/cmsy/m/n/12 ^^@
+ []
+
+
+Overfull \hbox (40.1921pt too wide) in paragraph at lines 160--1
+\OT1/cmr/m/n/12 5717 \OMS/cmsy/m/n/12 ^^@ \OT1/cmr/m/n/12 4562 \OMS/cmsy/m/n/12 ^^@ \OML/cmm/m/it/12 b\OT1/cmr/m/n/12 3\OML/cmm/m/it/12 fc \OMS/cmsy/m/n/12 ^^@ \OT1/cmr/m/n/12 2\OML/cmm/m/it/12 c\OT1/cmr/m/n/12 963\OML/cmm/m/it/12 f\OT1/cmr/m/n/12 66\OML/cmm/m/it/12 afa\OT1/cmr/m/n/12 6"\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 "\OML/cmm/m/it/12 estimated[]ta[]inutes\OT1/cmr/m/n/12 " : 14\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 "\OML/cmm/m/it/12 confidence[]core\OT1/cmr/m/n/12 " :
+ []
+
+) (chapters/chuong5.tex) [12] (main.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2025-12-24>
  ***********
-
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
  ) 
 Here is how much of TeX's memory you used:
- 1319 strings out of 467871
- 18933 string characters out of 5435211
- 442733 words of memory out of 5000000
- 30225 multiletter control sequences out of 15000+600000
- 640160 words of font info for 61 fonts, out of 8000000 for 9000
+ 1320 strings out of 467871
+ 19839 string characters out of 5428444
+ 449733 words of memory out of 5000000
+ 30224 multiletter control sequences out of 15000+600000
+ 641318 words of font info for 63 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 57i,10n,65p,853b,256s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<D:/Miktex/fonts/type1/vntex/vnr/vnbx12.pfb><D:/Miktex/fonts/type1/vntex/vnr/vnr12.pfb><D:/Miktex/fonts/type1/vntex/vnr/vnr17.pfb>
-Output written on main.pdf (9 pages, 74998 bytes).
+ 57i,9n,65p,897b,246s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ <C:\Users\admin\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk> <C:\Users\admin\AppData\Local\MiKTeX\fonts/pk/ljfour/vntex/vnr/dpi600\vnti12.pk> <C:\Users\admin\AppData\Local\MiKTeX\fonts/pk/ljfour/vntex/vnr/dpi600\vnbx12.pk> <C:\Users\admin\AppData\Local\MiKTeX\fonts/pk/ljfour/vntex/vnr/dpi720\vnbx12.pk> <C:\Users\admin\AppData\Local\MiKTeX\fonts/pk/ljfour/vntex/vnr/dpi600\vnr12.pk> <C:\Users\admin\AppData\Local\MiKTeX\fonts/pk/ljfour/vntex/vnr/dpi864\vnbx12.pk> <C:\Users\admin\AppData\Local\MiKTeX\fonts/pk/ljfour/vntex/vnr/dpi1244\vnbx12.pk> <C:\Users\admin\AppData\Local\MiKTeX\fonts/pk/ljfour/vntex/vnr/dpi720\vnr12.pk> <C:\Users\admin\AppData\Local\MiKTeX\fonts/pk/ljfour/vntex/vnr/dpi732\vnr17.pk><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
+Output written on main.pdf (13 pages, 263274 bytes).
 PDF statistics:
- 47 PDF objects out of 1000 (max. 8388607)
+ 570 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

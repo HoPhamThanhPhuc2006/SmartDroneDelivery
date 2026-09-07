@@ -1,17 +1,52 @@
-\documentclass[12pt]{report}
+\documentclass[12pt,a4paper]{report}
 \usepackage[utf8]{vietnam}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{geometry}
+\usepackage{setspace}
+\usepackage{float}          
+\usepackage{placeins}
 
-\title{ĐỒ ÁN: SMART DRONE DELIVERY}
-\author{Nhóm Thực Hiện}
-\date{\today}
+\geometry{
+    a4paper,
+    top=2.5cm,
+    bottom=2.5cm,
+    left=3.5cm,
+    right=2.0cm
+}
+
+\onehalfspacing
 
 \begin{document}
-\maketitle
 
-\input{chapters/chuong1.tex}
-\input{chapters/chuong2.tex}
-\input{chapters/chuong3.tex}
-\input{chapters/chuong4.tex}
-\input{chapters/chuong5.tex}
+\begin{titlepage}
+    \centering
+    \vspace*{1cm}
+    \Large\textbf{TRƯỜNG ĐẠI HỌC GIAO THÔNG VẬN TẢI TPHCM}\\[0.5cm]
+    \textbf{KHOA CÔNG NGHỆ THÔNG TIN}\\[2cm]
+    
+    \Large\textbf{BÁO CÁO ĐỒ ÁN MÔN HỌC}\\[0.5cm]
+    \Large\textbf{ĐỀ TÀI:}\\
+    \huge\textbf{HỆ THỐNG GIAO HÀNG BẰNG DRONE THÔNG MINH}\\[2cm]
+    
+    \Large
+    \begin{flushright}
+        \textbf{Giảng viên hướng dẫn:} Nguyễn Văn Chiến \\
+        \textbf{Nhóm sinh viên thực hiện:} Nhóm 1\\
+    \end{flushright}
+    
+    \vfill
+    \Large TP. HỒ CHÍ MINH - 2026
+\end{titlepage}
+
+\tableofcontents
+\clearpage
+
+% Chèn đầy đủ tất cả các chương theo thứ tự
+\input{../chapters/chuong1.tex}
+\input{../chapters/chuong2.tex}
+\input{../chapters/chuong3.tex}
+\input{../chapters/chuong4.tex}
+\input{../chapters/chuong5.tex}
 
 \end{document}

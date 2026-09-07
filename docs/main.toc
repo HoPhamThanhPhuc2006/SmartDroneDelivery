@@ -5,14 +5,24 @@
 \contentsline {section}{\numberline {1.4}Phạm vi của đồ án}{3}{section.1.4}%
 \contentsline {section}{\numberline {1.5}Phương pháp thực hiện}{3}{section.1.5}%
 \contentsline {chapter}{\numberline {2}PHÂN TÍCH YÊU CẦU HỆ THỐNG}{5}{chapter.2}%
-\contentsline {section}{\numberline {2.1}Phân tích yêu cầu chức năng}{5}{section.2.1}%
-\contentsline {section}{\numberline {2.2}Phân tích yêu cầu phi chức năng}{7}{section.2.2}%
-\contentsline {section}{\numberline {2.3}Sơ đồ Use Case}{7}{section.2.3}%
-\contentsline {subsection}{\numberline {2.3.1}Danh sách Actor}{7}{subsection.2.3.1}%
-\contentsline {subsection}{\numberline {2.3.2}Đặc tả Use Case: Đặt đơn hàng}{8}{subsection.2.3.2}%
-\contentsline {section}{\numberline {2.4}Mô hình hóa quy trình nghiệp vụ}{8}{section.2.4}%
-\contentsline {subsection}{\numberline {2.4.1}Quy trình đặt đơn hàng}{8}{subsection.2.4.1}%
-\contentsline {subsection}{\numberline {2.4.2}Quy trình phân công shipper}{10}{subsection.2.4.2}%
-\contentsline {subsection}{\numberline {2.4.3}Quy trình giao hàng và cập nhật trạng thái thời gian thực}{10}{subsection.2.4.3}%
-\contentsline {subsection}{\numberline {2.4.4}Quy trình tương tác với chatbot hỗ trợ}{12}{subsection.2.4.4}%
-\contentsline {subsection}{\numberline {2.4.5}Quy trình thống kê báo cáo}{12}{subsection.2.4.5}%
+\contentsline {section}{\numberline {2.1}Phân tích yêu cầu hệ thống}{5}{section.2.1}%
+\contentsline {subsection}{\numberline {2.1.1}Yêu cầu chức năng}{5}{subsection.2.1.1}%
+\contentsline {subsection}{\numberline {2.1.2}Yêu cầu phi chức năng}{6}{subsection.2.1.2}%
+\contentsline {section}{\numberline {2.2}Sơ đồ Use Case}{6}{section.2.2}%
+\contentsline {section}{\numberline {2.3}Mô hình hóa quy trình nghiệp vụ (BPMN)}{6}{section.2.3}%
+\contentsline {subsection}{\numberline {2.3.1}Luồng 1: Quản lý yêu cầu giao hàng}{6}{subsection.2.3.1}%
+\contentsline {subsection}{\numberline {2.3.2}Luồng 2: Quản lý kiện hàng}{6}{subsection.2.3.2}%
+\contentsline {subsection}{\numberline {2.3.3}Luồng 3: Thực hiện giao hàng bằng drone}{7}{subsection.2.3.3}%
+\contentsline {subsection}{\numberline {2.3.4}Luồng 4: Theo dõi trạng thái giao hàng}{7}{subsection.2.3.4}%
+\contentsline {subsection}{\numberline {2.3.5}Luồng 5: Xác nhận hoàn thành giao hàng}{7}{subsection.2.3.5}%
+\contentsline {section}{\numberline {2.4}Thiết kế giao diện người dùng (UI)}{7}{section.2.4}%
+\contentsline {section}{\numberline {2.5}Thiết kế trải nghiệm người dùng (UX)}{7}{section.2.5}%
+\contentsline {chapter}{\numberline {3}THIẾT KẾ KIẾN TRÚC PHẦN MỀM VÀ CƠ SỞ DỮ LIỆU}{8}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Giới thiệu kiến trúc hệ thống}{8}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}Mô hình kiến trúc Clean Architecture}{8}{subsection.3.1.1}%
+\contentsline {section}{\numberline {3.2}Thiết kế cơ sở dữ liệu PostgreSQL}{9}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}Chi tiết các bảng dữ liệu}{9}{subsection.3.2.1}%
+\contentsline {section}{\numberline {3.3}Mô tả luồng vận hành nghiệp vụ}{11}{section.3.3}%
+\contentsline {section}{\numberline {3.4}Thiết kế giao diện lập trình ứng dụng RESTful API}{11}{section.3.4}%
+\contentsline {subsection}{\numberline {3.4.1}Danh sách các cổng kết nối chính}{12}{subsection.3.4.1}%
+\contentsline {subsection}{\numberline {3.4.2}Đặc tả định dạng dữ liệu truyền nhận}{12}{subsection.3.4.2}%

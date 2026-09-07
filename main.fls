@@ -1,70 +1,72 @@
-PWD e:\tkcsdl\SmartDroneDelivery
-INPUT C:\Users\baong\AppData\Local\MiKTeX\miktex\data\le\pdftex\pdflatex.fmt
-INPUT e:\tkcsdl\SmartDroneDelivery\main.tex
+PWD c:\Users\admin\Downloads\SmartDroneDelivery-main\SmartDroneDelivery-main
+INPUT C:\Users\admin\AppData\Local\MiKTeX\miktex\data\le\pdftex\pdflatex.fmt
+INPUT c:\Users\admin\Downloads\SmartDroneDelivery-main\SmartDroneDelivery-main\main.tex
 OUTPUT main.log
-INPUT D:\Miktex\tex\latex\base\report.cls
-INPUT D:\Miktex\tex\latex\base\report.cls
-INPUT D:\Miktex\tex\latex\base\size12.clo
-INPUT D:\Miktex\tex\latex\base\size12.clo
-INPUT D:\Miktex\tex\latex\base\size12.clo
-INPUT D:\Miktex\fonts\tfm\public\cm\cmr12.tfm
-INPUT D:\Miktex\tex\latex\vntex\vietnam.sty
-INPUT D:\Miktex\tex\latex\vntex\vietnam.sty
-INPUT D:\Miktex\tex\latex\base\ifthen.sty
-INPUT D:\Miktex\tex\latex\base\ifthen.sty
-INPUT D:\Miktex\tex\latex\base\inputenc.sty
-INPUT D:\Miktex\tex\latex\base\fontenc.sty
-INPUT D:\Miktex\tex\latex\base\fontenc.sty
-INPUT D:\Miktex\tex\latex\vntex\t5enc.def
-INPUT D:\Miktex\tex\latex\vntex\t5enc.def
-INPUT D:\Miktex\tex\latex\vntex\t5enc.def
-INPUT D:\Miktex\tex\latex\vntex\t5enc.dfu
-INPUT D:\Miktex\tex\latex\vntex\t5enc.dfu
-INPUT D:\Miktex\tex\latex\vntex\t5enc.dfu
-INPUT D:\Miktex\tex\latex\vntex\t5cmr.fd
-INPUT D:\Miktex\tex\latex\vntex\t5cmr.fd
-INPUT D:\Miktex\tex\latex\vntex\t5cmr.fd
-INPUT D:\Miktex\fonts\tfm\vntex\vnr\vnr12.tfm
-INPUT D:\Miktex\tex\latex\base\inputenc.sty
-INPUT D:\Miktex\tex\latex\vntex\vncaps.tex
-INPUT D:\Miktex\tex\latex\vntex\vncaps.tex
-INPUT D:\Miktex\tex\latex\vntex\vncaps.tex
-INPUT D:\Miktex\tex\latex\l3backend\l3backend-pdftex.def
-INPUT D:\Miktex\tex\latex\l3backend\l3backend-pdftex.def
+INPUT C:\Program Files\MiKTeX\tex\latex\base\report.cls
+INPUT C:\Program Files\MiKTeX\tex\latex\base\report.cls
+INPUT C:\Program Files\MiKTeX\tex\latex\base\size12.clo
+INPUT C:\Program Files\MiKTeX\tex\latex\base\size12.clo
+INPUT C:\Program Files\MiKTeX\tex\latex\base\size12.clo
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmr12.tfm
+INPUT C:\Program Files\MiKTeX\tex\latex\vntex\vietnam.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\vntex\vietnam.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\base\ifthen.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\base\ifthen.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\base\inputenc.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\base\fontenc.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\base\fontenc.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\vntex\t5enc.def
+INPUT C:\Program Files\MiKTeX\tex\latex\vntex\t5enc.def
+INPUT C:\Program Files\MiKTeX\tex\latex\vntex\t5enc.def
+INPUT C:\Program Files\MiKTeX\tex\latex\vntex\t5enc.dfu
+INPUT C:\Program Files\MiKTeX\tex\latex\vntex\t5enc.dfu
+INPUT C:\Program Files\MiKTeX\tex\latex\vntex\t5enc.dfu
+INPUT C:\Program Files\MiKTeX\tex\latex\vntex\t5cmr.fd
+INPUT C:\Program Files\MiKTeX\tex\latex\vntex\t5cmr.fd
+INPUT C:\Program Files\MiKTeX\tex\latex\vntex\t5cmr.fd
+INPUT C:\Program Files\MiKTeX\fonts\tfm\vntex\vnr\vnr12.tfm
+INPUT C:\Program Files\MiKTeX\tex\latex\base\inputenc.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\vntex\vncaps.tex
+INPUT C:\Program Files\MiKTeX\tex\latex\vntex\vncaps.tex
+INPUT C:\Program Files\MiKTeX\tex\latex\vntex\vncaps.tex
+INPUT C:\Program Files\MiKTeX\tex\latex\l3backend\l3backend-pdftex.def
+INPUT C:\Program Files\MiKTeX\tex\latex\l3backend\l3backend-pdftex.def
 INPUT .\main.aux
 INPUT .\main.aux
 INPUT main.aux
 OUTPUT main.aux
-INPUT D:\Miktex\fonts\tfm\vntex\vnr\vnr17.tfm
-INPUT D:\Miktex\fonts\tfm\vntex\vnr\vnr12.tfm
-INPUT D:\Miktex\fonts\tfm\public\cm\cmr12.tfm
-INPUT D:\Miktex\fonts\tfm\public\cm\cmmi12.tfm
-INPUT D:\Miktex\fonts\tfm\public\cm\cmsy10.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\vntex\vnr\vnr17.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\vntex\vnr\vnr12.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmr12.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmmi12.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmsy10.tfm
 OUTPUT main.pdf
-INPUT C:\Users\baong\AppData\Local\MiKTeX\fonts\map\pdftex\pdftex.map
+INPUT C:\Users\admin\AppData\Local\MiKTeX\fonts\map\pdftex\pdftex.map
 INPUT .\chapters\chuong1.tex
 INPUT .\chapters\chuong1.tex
 INPUT chapters\chuong1.tex
-INPUT D:\Miktex\fonts\tfm\vntex\vnr\vnr17.tfm
-INPUT D:\Miktex\fonts\tfm\vntex\vnr\vnbx12.tfm
-INPUT D:\Miktex\fonts\tfm\vntex\vnr\vnr17.tfm
-INPUT D:\Miktex\fonts\tfm\vntex\vnr\vnbx12.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\vntex\vnr\vnr17.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\vntex\vnr\vnbx12.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\vntex\vnr\vnr17.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\vntex\vnr\vnbx12.tfm
 INPUT .\chapters\chuong2.tex
 INPUT .\chapters\chuong2.tex
 INPUT chapters\chuong2.tex
-INPUT D:\Miktex\fonts\tfm\public\cm\cmr8.tfm
-INPUT D:\Miktex\fonts\tfm\public\cm\cmr6.tfm
-INPUT D:\Miktex\fonts\tfm\public\cm\cmmi12.tfm
-INPUT D:\Miktex\fonts\tfm\public\cm\cmmi8.tfm
-INPUT D:\Miktex\fonts\tfm\public\cm\cmmi6.tfm
-INPUT D:\Miktex\fonts\tfm\public\cm\cmsy10.tfm
-INPUT D:\Miktex\fonts\tfm\public\cm\cmsy8.tfm
-INPUT D:\Miktex\fonts\tfm\public\cm\cmsy6.tfm
-INPUT D:\Miktex\fonts\tfm\vntex\vnr\vnbx12.tfm
-INPUT D:\Miktex\fonts\tfm\vntex\vnr\vnbx12.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\vntex\vnr\vnbx12.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\vntex\vnr\vnbx12.tfm
 INPUT .\chapters\chuong3.tex
 INPUT .\chapters\chuong3.tex
 INPUT chapters\chuong3.tex
+INPUT C:\Program Files\MiKTeX\fonts\tfm\vntex\vnr\vnti12.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\jknappen\ec\tcrm1200.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmr8.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmr6.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmmi12.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmmi8.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmmi6.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmsy10.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmsy8.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmsy6.tfm
 INPUT .\chapters\chuong4.tex
 INPUT .\chapters\chuong4.tex
 INPUT chapters\chuong4.tex
@@ -72,9 +74,29 @@ INPUT .\chapters\chuong5.tex
 INPUT .\chapters\chuong5.tex
 INPUT chapters\chuong5.tex
 INPUT main.aux
-INPUT D:\Miktex\fonts\type1\vntex\vnr\vnbx12.pfb
-INPUT D:\Miktex\fonts\type1\vntex\vnr\vnbx12.pfb
-INPUT D:\Miktex\fonts\type1\vntex\vnr\vnr12.pfb
-INPUT D:\Miktex\fonts\type1\vntex\vnr\vnr12.pfb
-INPUT D:\Miktex\fonts\type1\vntex\vnr\vnr17.pfb
-INPUT D:\Miktex\fonts\type1\vntex\vnr\vnr17.pfb
+INPUT C:\Users\admin\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\tcrm1200.pk
+INPUT C:\Users\admin\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\tcrm1200.pk
+INPUT C:\Users\admin\AppData\Local\MiKTeX\fonts\pk\ljfour\vntex\vnr\dpi600\vnti12.pk
+INPUT C:\Users\admin\AppData\Local\MiKTeX\fonts\pk\ljfour\vntex\vnr\dpi600\vnti12.pk
+INPUT C:\Users\admin\AppData\Local\MiKTeX\fonts\pk\ljfour\vntex\vnr\dpi600\vnbx12.pk
+INPUT C:\Users\admin\AppData\Local\MiKTeX\fonts\pk\ljfour\vntex\vnr\dpi600\vnbx12.pk
+INPUT C:\Users\admin\AppData\Local\MiKTeX\fonts\pk\ljfour\vntex\vnr\dpi720\vnbx12.pk
+INPUT C:\Users\admin\AppData\Local\MiKTeX\fonts\pk\ljfour\vntex\vnr\dpi720\vnbx12.pk
+INPUT C:\Users\admin\AppData\Local\MiKTeX\fonts\pk\ljfour\vntex\vnr\dpi600\vnr12.pk
+INPUT C:\Users\admin\AppData\Local\MiKTeX\fonts\pk\ljfour\vntex\vnr\dpi600\vnr12.pk
+INPUT C:\Users\admin\AppData\Local\MiKTeX\fonts\pk\ljfour\vntex\vnr\dpi864\vnbx12.pk
+INPUT C:\Users\admin\AppData\Local\MiKTeX\fonts\pk\ljfour\vntex\vnr\dpi864\vnbx12.pk
+INPUT C:\Users\admin\AppData\Local\MiKTeX\fonts\pk\ljfour\vntex\vnr\dpi1244\vnbx12.pk
+INPUT C:\Users\admin\AppData\Local\MiKTeX\fonts\pk\ljfour\vntex\vnr\dpi1244\vnbx12.pk
+INPUT C:\Users\admin\AppData\Local\MiKTeX\fonts\pk\ljfour\vntex\vnr\dpi720\vnr12.pk
+INPUT C:\Users\admin\AppData\Local\MiKTeX\fonts\pk\ljfour\vntex\vnr\dpi720\vnr12.pk
+INPUT C:\Users\admin\AppData\Local\MiKTeX\fonts\pk\ljfour\vntex\vnr\dpi732\vnr17.pk
+INPUT C:\Users\admin\AppData\Local\MiKTeX\fonts\pk\ljfour\vntex\vnr\dpi732\vnr17.pk
+INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi12.pfb
+INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi12.pfb
+INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi8.pfb
+INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi8.pfb
+INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmr12.pfb
+INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmr12.pfb
+INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy10.pfb
+INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy10.pfb
