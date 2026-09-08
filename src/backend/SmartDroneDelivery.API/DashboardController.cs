@@ -1,41 +1,32 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using SmartDroneDelivery.API.Data;
 
-namespace SmartDroneDelivery.API.Controllers;
-
-[ApiController]
-[Route("api/[controller]")]
-public class DashboardController : ControllerBase
+namespace SmartDroneDelivery.API
 {
-    private readonly AppDbContext _context;
-
-    public DashboardController(AppDbContext context)
+    [ApiController]
+    [Route("api/[controller]")]
+    public class DashboardController : ControllerBase
     {
-        _context = context;
-    }
+        private readonly AppDbContext _context;
 
-    [HttpGet("stats")]
-    public async Task<IActionResult> GetStats()
-    {
-        var totalOrdersToday = await _context.DeliveryOrders.CountAsync();
-        var activeDrones = await _context.Drones.CountAsync(d => d.Status == "InFlight");
-        var availableStations = await _context.LandingStations.CountAsync(s => s.IsAvailable);
-
-        return Ok(new
+        public DashboardController(AppDbContext context)
         {
-            TotalOrdersToday = totalOrdersToday,
-            SuccessRatePercent = 98.2,
-            AverageEtaMinutes = 18,
-            ActiveDronesCount = activeDrones,
-            AvailableStationsCount = availableStations
-        });
-    }
+            _context = context;
+        }
 
-    [HttpGet("orders")]
-    public async Task<IActionResult> GetOrders()
-    {
-        var orders = await _context.DeliveryOrders.Include(o => o.AssignedDrone).ToListAsync();
-        return Ok(orders);
+        [HttpGet("stats")]
+        public async Task<IActionResult> GetStats()
+        {
+            var totalOrders = await _context.DeliveryOrders.CountAsync();
+            var activeDrones = await _context.Drones.CountAsync();
+            var totalStations = await _context.LandingStations.CountAsync();
+
+            return Ok(new
+            {
+                TotalOrders = totalOrders,
+                ActiveDrones = activeDrones,
+                TotalStations = totalStations
+            });
+        }
     }
 }
