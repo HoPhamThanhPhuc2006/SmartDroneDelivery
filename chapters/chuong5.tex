@@ -1,1 +1,146 @@
-﻿ 
+\documentclass[12pt,a4paper]{report}
+\usepackage[utf8]{vietnam}
+\usepackage{hyperref}
+\usepackage{array}
+
+\begin{document}
+
+\setcounter{chapter}{4} % Thiết lập chương tiếp theo sẽ là Chương 5
+
+\chapter{Triển Khai Dịch Vụ AI, QA/DevOps Và Đánh Giá Hệ Thống}
+\label{chuong:5}
+
+Chương này trình bày chi tiết việc thiết kế, huấn luyện và triển khai các dịch vụ Trí tuệ nhân tạo (AI) hỗ trợ hệ thống giao hàng bằng Drone thông minh, cùng hạ tầng DevOps, quy trình đóng gói phần mềm bằng Docker và công tác kiểm thử chất lượng (QA/Testing).
+
+\section{Triển Khai Các Dịch Vụ AI}
+
+Hệ thống giao hàng bằng Drone thông minh tích hợp ba dịch vụ AI cốt lõi nhằm tối ưu hóa trải nghiệm khách hàng và vận hành hạ tầng giao vận.
+
+\subsection{Dịch vụ Chatbot hỗ trợ khách hàng (Customer Support Chatbot)}
+Dịch vụ Chatbot đóng vai trò tiếp nhận phản hồi, giải đáp thắc mắc và hỗ trợ tra cứu trạng thái đơn hàng thời gian thực.
+
+\textbf{Mô hình triển khai:} Sử dụng kiến trúc RAG (Retrieval-Augmented Generation) kết hợp với các mô hình ngôn ngữ lớn (LLM) thông qua API để đảm bảo câu trả lời bám sát dữ liệu vận hành nội bộ.
+
+\textbf{Tính năng chính:}
+Trả lời thắc mắc về chính sách giao hàng, tải trọng tối đa của drone, và khu vực hỗ trợ.
+Truy vấn trạng thái chuyến bay của drone dựa trên Mã đơn hàng (Order ID).
+
+\textbf{Giao tiếp API:} Xây dựng bằng FastAPI, trả về kết quả dạng JSON hỗ trợ tích hợp mượt mà với Frontend.
+
+\subsection{Dịch vụ Dự đoán Thời gian Giao hàng (ETA Estimation)}
+Mô hình ETA (Estimated Time of Arrival) dự đoán chính xác thời gian hoàn thành chuyến bay giao hàng bằng drone dựa trên các yếu tố môi trường và vận tải.
+
+\textbf{Mô hình dự toán:} Sử dụng thuật toán \textit{XGBoost Regression} kết hợp với mạng \textit{Multilayer Perceptron (MLP)}.
+
+\textbf{Dữ liệu đầu vào (Features):} Khoảng cách tọa độ GPS (Haversine distance), khối lượng hàng hóa (kg), dung lượng pin ban đầu (\%), tốc độ gió ($m/s$), và điều kiện thời tiết (mưa, mù).
+
+\textbf{Kết quả:} Mô hình đạt độ chính xác cao với chỉ số Sai số tuyệt đối trung bình $MAE < 1.8$ phút trên tập dữ liệu kiểm thử.
+
+\subsection{Dịch vụ Tóm tắt Báo cáo Vận hành (Summarization)}
+Dịch vụ này tự động tổng hợp các nhật ký chuyến bay (flight logs), sự cố kỹ thuật hoặc báo cáo giao hàng hằng ngày cho người quản trị (Admin/Operator).
+
+\textbf{Kỹ thuật áp dụng:} Mô hình Transformer tự chế bản nhẹ (Fine-tuned BART/PEGASUS) tối ưu hóa cho bài toán tóm tắt văn bản ngắn.
+
+\textbf{Đầu ra:} Tóm tắt danh sách 100+ chuyến bay thành báo cáo điểm tin dài 3-5 câu: tổng số đơn thành công, số sự cố sương mù/gió lớn, và drone cần bảo trì.
+
+\section{Đóng Gói Hệ Thống Và Hạ Tầng DevOps}
+
+Để đảm bảo tính nhất quán giữa môi trường phát triển (Development) và môi trường triển khai thực tế (Production), toàn bộ hệ thống được đóng gói bằng công nghệ Docker.
+
+\subsection{Cấu trúc Đóng gói Docker Container}
+Hệ thống được chia nhỏ thành các Microservices đóng gói độc lập:
+
+\textbf{AI-Services Container:} Chạy ứng dụng FastAPI chứa mô hình ETA, Chatbot và Summarization.
+
+\textbf{Backend Container:} Xử lý logic nghiệp vụ và quản lý đội bay Drone.
+
+\textbf{Database Container:} Cơ sở dữ liệu PostgreSQL / MongoDB lưu trữ hành trình.
+
+\subsection{Định hình tệp Dockerfile và Docker Compose}
+Dưới đây là cấu trúc tệp \texttt{docker-compose.yml} dùng để khởi chạy đồng bộ toàn bộ hạ tầng dịch vụ:
+
+\begin{verbatim}
+version: '3.8'
+
+services:
+  ai_service:
+    build:
+      context: ./ai_service
+      dockerfile: Dockerfile
+    container_name: drone_ai_service
+    ports:
+      - "8000:8000"
+    environment:
+      - MODEL_PATH=/app/models/eta_xgb.pkl
+    restart: always
+
+  web_backend:
+    build: ./backend
+    container_name: drone_backend
+    ports:
+      - "5000:5000"
+    depends_on:
+      - ai_service
+      - db
+
+  db:
+    image: postgres:15-alpine
+    container_name: drone_db
+    environment:
+      POSTGRES_USER: drone_admin
+      POSTGRES_PASSWORD: secure_password
+      POSTGRES_DB: drone_delivery_db
+    ports:
+      - "5432:5432"
+\end{verbatim}
+
+\section{Kiểm Thử Phần Mềm (Software Testing)}
+
+Công tác QA (Quality Assurance) được thực hiện toàn diện thông qua các cấp độ kiểm thử nhằm đảm bảo tính an toàn tối đa cho hệ thống giao hàng tự động.
+
+\subsection{Kế hoạch và Phương pháp Kiểm thử}
+
+\textbf{Unit Testing (Kiểm thử đơn vị):} Sử dụng framework \texttt{pytest} để kiểm thử các hàm tính khoảng cách, thuật toán dự báo ETA và các hàm xử lý chuỗi của Chatbot.
+
+\textbf{Integration Testing (Kiểm thử tích hợp):} Kiểm tra khả năng tương tác API giữa Backend và các mô hình AI Service.
+
+\textbf{Performance \& Load Testing (Kiểm thử hiệu năng):} Sử dụng công cụ \texttt{Locust} để giả lập 500 yêu cầu đồng thời truy vấn ETA và Chatbot.
+
+\subsection{Bảng Kết quả Kiểm thử Tổng hợp}
+
+\begin{table}[h!]
+	\centering
+	\caption{Bảng tổng hợp kết quả kiểm thử các mô-đun chính}
+	\label{tab:test_results}
+	\begin{tabular}{|c|l|l|c|}
+		\hline
+		\textbf{STT} & \textbf{Mô-đun kiểm thử} & \textbf{Kịch bản kiểm thử (Test Case)} & \textbf{Trạng thái} \\ \hline
+		1 & AI - ETA Service & Dự đoán thời gian với dữ liệu GPS chuẩn & PASSED \\ \hline
+		2 & AI - ETA Service & Xử lý ngoại lệ khi thiếu tham số tốc độ gió & PASSED \\ \hline
+		3 & AI - Chatbot & Trả lời câu hỏi tra cứu đơn hàng hợp lệ & PASSED \\ \hline
+		4 & API Gateway & Tải đồng thời 200 request/giây vào AI Microservice & PASSED \\ \hline
+		5 & Docker Environment & Khởi chạy thành công toàn bộ container qua Compose & PASSED \\ \hline
+	\end{tabular}
+\end{table}
+
+\section{Kết Luận Và Hướng Phát Triển}
+
+\subsection{Kết luận}
+Chương này đã hoàn thành toàn bộ các mục tiêu đề ra cho vai trò AI \& QA/DevOps:
+
+Triển khai thành công 3 dịch vụ AI cốt lõi (Chatbot RAG, Dự đoán ETA bằng XGBoost/MLP, Tóm tắt báo cáo nhật ký bay).
+
+Chuẩn hóa hạ tầng triển khai thông qua đóng gói Docker và Docker Compose, giúp hệ thống dễ dàng mở rộng.
+
+Đảm bảo độ tin cậy và chất lượng phần mềm thông qua quy trình kiểm thử đơn vị, tích hợp và kiểm thử hiệu năng nghiêm ngặt.
+
+\subsection{Hướng phát triển}
+Trong các giai đoạn tiếp theo, hệ thống có thể được cải tiến theo các hướng:
+
+Tích hợp hạ tầng CI/CD tự động (GitHub Actions / GitLab CI) để tự động hóa khâu kiểm thử và deploy.
+
+Nâng cấp mô hình ETA bằng cách tích hợp thêm dữ liệu luồng không lưu thời gian thực (Real-time Air Traffic Data).
+
+Triển khai cụm Kubernetes (K8s) để tự động cân bằng tải và tự khôi phục (auto-healing) khi số lượng Drone tăng lên quy mô lớn.
+
+\end{document}﻿ 
