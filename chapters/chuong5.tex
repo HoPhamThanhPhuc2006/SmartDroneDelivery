@@ -1,3 +1,12 @@
+\documentclass[12pt,a4paper]{report}
+\usepackage[utf8]{vietnam}
+\usepackage{hyperref}
+\usepackage{array}
+
+\begin{document}
+
+\setcounter{chapter}{4} % Thiết lập chương tiếp theo sẽ là Chương 5
+
 \chapter{Triển Khai Dịch Vụ AI, QA/DevOps Và Đánh Giá Hệ Thống}
 \label{chuong:5}
 
@@ -13,10 +22,8 @@ Dịch vụ Chatbot đóng vai trò tiếp nhận phản hồi, giải đáp th�
 \textbf{Mô hình triển khai:} Sử dụng kiến trúc RAG (Retrieval-Augmented Generation) kết hợp với các mô hình ngôn ngữ lớn (LLM) thông qua API để đảm bảo câu trả lời bám sát dữ liệu vận hành nội bộ.
 
 \textbf{Tính năng chính:}
-\begin{itemize}
-    \item Trả lời thắc mắc về chính sách giao hàng, tải trọng tối đa của drone, và khu vực hỗ trợ.
-    \item Truy vấn trạng thái chuyến bay của drone dựa trên Mã đơn hàng (Order ID).
-\end{itemize}
+Trả lời thắc mắc về chính sách giao hàng, tải trọng tối đa của drone, và khu vực hỗ trợ.
+Truy vấn trạng thái chuyến bay của drone dựa trên Mã đơn hàng (Order ID).
 
 \textbf{Giao tiếp API:} Xây dựng bằng FastAPI, trả về kết quả dạng JSON hỗ trợ tích hợp mượt mà với Frontend.
 
@@ -42,11 +49,12 @@ Dịch vụ này tự động tổng hợp các nhật ký chuyến bay (flight 
 
 \subsection{Cấu trúc Đóng gói Docker Container}
 Hệ thống được chia nhỏ thành các Microservices đóng gói độc lập:
-\begin{itemize}
-    \item \textbf{AI-Services Container:} Chạy ứng dụng FastAPI chứa mô hình ETA, Chatbot và Summarization.
-    \item \textbf{Backend Container:} Xử lý logic nghiệp vụ và quản lý đội bay Drone.
-    \item \textbf{Database Container:} Cơ sở dữ liệu PostgreSQL / MongoDB lưu trữ hành trình.
-\end{itemize}
+
+\textbf{AI-Services Container:} Chạy ứng dụng FastAPI chứa mô hình ETA, Chatbot và Summarization.
+
+\textbf{Backend Container:} Xử lý logic nghiệp vụ và quản lý đội bay Drone.
+
+\textbf{Database Container:} Cơ sở dữ liệu PostgreSQL / MongoDB lưu trữ hành trình.
 
 \subsection{Định hình tệp Dockerfile và Docker Compose}
 Dưới đây là cấu trúc tệp \texttt{docker-compose.yml} dùng để khởi chạy đồng bộ toàn bộ hạ tầng dịch vụ:
@@ -119,16 +127,20 @@ Công tác QA (Quality Assurance) được thực hiện toàn diện thông qua
 
 \subsection{Kết luận}
 Chương này đã hoàn thành toàn bộ các mục tiêu đề ra cho vai trò AI \& QA/DevOps:
-\begin{itemize}
-    \item Triển khai thành công 3 dịch vụ AI cốt lõi (Chatbot RAG, Dự đoán ETA bằng XGBoost/MLP, Tóm tắt báo cáo nhật ký bay).
-    \item Chuẩn hóa hạ tầng triển khai thông qua đóng gói Docker và Docker Compose, giúp hệ thống dễ dàng mở rộng.
-    \item Đảm bảo độ tin cậy và chất lượng phần mềm thông qua quy trình kiểm thử đơn vị, tích hợp và kiểm thử hiệu năng nghiêm ngặt.
-\end{itemize}
+
+Triển khai thành công 3 dịch vụ AI cốt lõi (Chatbot RAG, Dự đoán ETA bằng XGBoost/MLP, Tóm tắt báo cáo nhật ký bay).
+
+Chuẩn hóa hạ tầng triển khai thông qua đóng gói Docker và Docker Compose, giúp hệ thống dễ dàng mở rộng.
+
+Đảm bảo độ tin cậy và chất lượng phần mềm thông qua quy trình kiểm thử đơn vị, tích hợp và kiểm thử hiệu năng nghiêm ngặt.
 
 \subsection{Hướng phát triển}
 Trong các giai đoạn tiếp theo, hệ thống có thể được cải tiến theo các hướng:
-\begin{itemize}
-    \item Tích hợp hạ tầng CI/CD tự động (GitHub Actions / GitLab CI) để tự động hóa khâu kiểm thử và deploy.
-    \item Nâng cấp mô hình ETA bằng cách tích hợp thêm dữ liệu luồng không lưu thời gian thực (Real-time Air Traffic Data).
-    \item Triển khai cụm Kubernetes (K8s) để tự động cân bằng tải và tự khôi phục (auto-healing) khi số lượng Drone tăng lên quy mô lớn.
-\end{itemize}
+
+Tích hợp hạ tầng CI/CD tự động (GitHub Actions / GitLab CI) để tự động hóa khâu kiểm thử và deploy.
+
+Nâng cấp mô hình ETA bằng cách tích hợp thêm dữ liệu luồng không lưu thời gian thực (Real-time Air Traffic Data).
+
+Triển khai cụm Kubernetes (K8s) để tự động cân bằng tải và tự khôi phục (auto-healing) khi số lượng Drone tăng lên quy mô lớn.
+
+\end{document}
