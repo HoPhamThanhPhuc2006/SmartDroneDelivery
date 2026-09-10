@@ -1,9 +1,9 @@
 # Fdb version 4
-["pdflatex"] 1789047893.35503 "e:/SmartDroneDelivery/docs/main.tex" "main.pdf" "main" 1789047895.11744 0
+["pdflatex"] 1789057428.10077 "e:/SmartDroneDelivery/docs/main.tex" "main.pdf" "main" 1789057430.61016 0
   "../chapters/chuong1.tex" 1789046457 5750 5dbdf7f9801bec22a3455aff2be2ca8d ""
   "../chapters/chuong2.tex" 1789046457 6009 8aaac668d72631a22fc764148dc30e38 ""
   "../chapters/chuong3.tex" 1789046457 13285 3bc35998781abe371be5d767067fe5af ""
-  "../chapters/chuong4.tex" 1789047892 10191 83d990deb9c9999ebe902f5c70028530 ""
+  "../chapters/chuong4.tex" 1789057424 11508 f672cedd2c30a53f86352913d863a4e1 ""
   "../chapters/chuong5.tex" 1789046457 7730 7a7c9ff930cc3440b64e37a9140ec8de ""
   "C:/Users/baong/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1788704578 145313 a8ad65a442f5c5f82b81e69d21dac88a ""
   "C:/Users/baong/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/tcrm1200.pk" 1788701276 14064 49dcc473d3396a5b79d5218fa7277278 ""
@@ -81,12 +81,14 @@
   "D:/Miktex/tex/latex/vntex/t5enc.dfu" 1368738347 13949 387dd4fa58aea5f873839c93430fffed ""
   "D:/Miktex/tex/latex/vntex/vietnam.sty" 1368738347 2477 91784aa2c9213f74609391e3cae65a13 ""
   "D:/Miktex/tex/latex/vntex/vncaps.tex" 1368738347 3273 a55ebdb07413d2fea580f210e3c0b252 ""
-  "e:/SmartDroneDelivery/docs/main.tex" 1789046457 1265 dfec0458478aa564b9a1039fbbe1da21 ""
-  "images/chuong4/web-portal-dashboard.png.png" 1789047300 59197 5274dcd5f0f2a010a468068934ec8447 ""
-  "main.aux" 1789047894 11528 d0ee107d41ca3a28adbbe8fdf50c39c3 "pdflatex"
-  "main.out" 1789047894 14755 aaa377a5c9a8166ef823b40080975201 "pdflatex"
-  "main.tex" 1789046457 1265 dfec0458478aa564b9a1039fbbe1da21 ""
-  "main.toc" 1789047894 6607 63007734425a56b32fdecfb8e54c3259 "pdflatex"
+  "e:/SmartDroneDelivery/docs/main.tex" 1789055396 1265 dfec0458478aa564b9a1039fbbe1da21 ""
+  "images/chuong4/design-system.png.png" 1789054524 825889 9f699748132a191d551a57f35a4a3f5c ""
+  "images/chuong4/mobile-screens.png.png" 1789056459 67857 b0f5a852bde9c4b0cc8e1e8ad2644f0d ""
+  "images/chuong4/web-portal-dashboard.png.jpg" 1789055206 72741 9af13480ed9e11a596058fedb567fc69 ""
+  "main.aux" 1789057430 11825 d147f2968055a6ca6bc1f634ffdcdf9d "pdflatex"
+  "main.out" 1789057430 14755 aaa377a5c9a8166ef823b40080975201 "pdflatex"
+  "main.tex" 1789055396 1265 dfec0458478aa564b9a1039fbbe1da21 ""
+  "main.toc" 1789057430 6607 563e5fa930ddd8f22a66b72a77345218 "pdflatex"
   (generated)
   "main.aux"
   "main.log"

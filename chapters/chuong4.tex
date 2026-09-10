@@ -8,7 +8,7 @@ Chương này trình bày quá trình thiết kế giao diện người dùng v�
 
 \subsection{Mục tiêu thiết kế}
 
-Nhóm em thực hiện thiết kế giao diện trên Figma để thống nhất về màu sắc, bố cục và luồng thao tác giữa các thành viên, tránh tình trạng mỗi người code một kiểu giao diện khác nhau. Mục tiêu chính là giao diện phải đơn giản, dễ dùng vì đối tượng sử dụng app khách hàng có thể không rành công nghệ, còn Web Portal thì cần hiển thị được nhiều thông tin cùng lúc (bản đồ, danh sách đơn, trạng thái drone) mà vẫn rõ ràng, không rối mắt.
+Nhóm em thực hiện thiết kế giao diện trên Figma để thống nhất về màu sắc, bố cục và luồng thao tác giữa các thành viên. Mục tiêu chính là giao diện phải đơn giản, dễ dùng vì đối tượng sử dụng app khách hàng có thể không rành công nghệ, còn Web Portal thì cần hiển thị được nhiều thông tin cùng lúc (bản đồ, danh sách đơn, trạng thái drone) mà vẫn rõ ràng, không rối mắt.
 
 \subsection{Design system}
 
@@ -21,11 +21,11 @@ Nhóm xây dựng một bộ design system dùng chung cho cả Web và Mobile �
 
 \end{itemize}
 
-% \begin{figure}[h]
-%     \centering
-%     \includegraphics[width=0.8\textwidth]{images/chuong4/design-system.png}
-%     \caption{Design system của hệ thống}
-% \end{figure}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\textwidth]{images/chuong4/design-system.png.png}
+\caption{Design system của hệ thống}
+\end{figure}
 
 \subsection{Thiết kế màn hình Mobile App}
 
@@ -40,11 +40,11 @@ Mobile App phục vụ đối tượng khách hàng, các màn hình chính bao 
     \item Màn hình Thông báo
 \end{itemize}
 
-% \begin{figure}[h]
-%     \centering
-%     \includegraphics[width=0.8\textwidth]{images/chuong4/mobile-screens.png}
-%     \caption{Một số màn hình chính của Mobile App}
-% \end{figure}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\textwidth]{images/chuong4/mobile-screens.png.png}
+\caption{Màn hình login của Mobile App}
+\end{figure}
 
 \subsection{Thiết kế màn hình Web Portal}
 
@@ -58,9 +58,9 @@ Web Portal phục vụ đối tượng quản trị viên và điều phối vi�
     \item Quản lý người dùng
 \end{itemize}
 
-\begin{figure}[h]
+\begin{figure}[H]
     \centering
-    \includegraphics[width=0.8\textwidth]{images/chuong4/web-portal-dashboard.png}
+    \includegraphics[width=0.8\textwidth]{images/chuong4/web-portal-dashboard.png.jpg}
     \caption{Giao diện Dashboard của Web Portal}
 \end{figure}
 
@@ -135,6 +135,49 @@ lib/
 \subsection{Quản lý state}
 
 Nhóm sử dụng thư viện quản lý state (Provider/BLoC) để tách biệt logic xử lý ra khỏi giao diện, giúp việc cập nhật vị trí drone theo thời gian thực không làm ảnh hưởng đến các phần khác của màn hình.
+
+Ví dụ về \texttt{OrderTrackingBloc}, chịu trách nhiệm lắng nghe vị trí drone theo thời gian thực và phát ra state mới cho màn hình theo dõi đơn hàng:
+
+\begin{verbatim}
+class OrderTrackingBloc extends Bloc<OrderTrackingEvent, OrderTrackingState> {
+  final TrackOrderUseCase trackOrderUseCase;
+  StreamSubscription? _locationSubscription;
+
+  OrderTrackingBloc(this.trackOrderUseCase) : super(OrderTrackingInitial()) {
+    on<StartTracking>((event, emit) async {
+      emit(OrderTrackingLoading());
+      _locationSubscription = trackOrderUseCase
+          .watchDroneLocation(event.orderId)
+          .listen((location) {
+        add(DroneLocationUpdated(location));
+      });
+    });
+
+    on<DroneLocationUpdated>((event, emit) {
+      emit(OrderTrackingActive(location: event.location));
+    });
+  }
+
+  @override
+  Future<void> close() {
+    _locationSubscription?.cancel();
+    return super.close();
+  }
+}
+\end{verbatim}
+
+Ở tầng giao diện, màn hình theo dõi đơn hàng chỉ cần lắng nghe state qua \texttt{BlocBuilder} và cập nhật marker trên bản đồ tương ứng:
+
+\begin{verbatim}
+BlocBuilder<OrderTrackingBloc, OrderTrackingState>(
+  builder: (context, state) {
+    if (state is OrderTrackingActive) {
+      return DroneMapWidget(droneLocation: state.location);
+    }
+    return const CircularProgressIndicator();
+  },
+)
+\end{verbatim}
 
 \subsection{Tích hợp bản đồ}
 

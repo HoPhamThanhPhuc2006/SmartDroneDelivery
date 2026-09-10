@@ -32,34 +32,34 @@
 \contentsline {subsection}{\numberline {4.2.1}Mục tiêu thiết kế}{15}{subsection.4.2.1}%
 \contentsline {subsection}{\numberline {4.2.2}Design system}{15}{subsection.4.2.2}%
 \contentsline {subsection}{\numberline {4.2.3}Thiết kế màn hình Mobile App}{16}{subsection.4.2.3}%
-\contentsline {subsection}{\numberline {4.2.4}Thiết kế màn hình Web Portal}{16}{subsection.4.2.4}%
-\contentsline {section}{\numberline {4.3}Triển khai Web Portal bằng ReactJS}{17}{section.4.3}%
-\contentsline {subsection}{\numberline {4.3.1}Kiến trúc thư mục}{17}{subsection.4.3.1}%
-\contentsline {subsection}{\numberline {4.3.2}Các thành phần chính}{17}{subsection.4.3.2}%
-\contentsline {subsection}{\numberline {4.3.3}Quản lý state và gọi API}{18}{subsection.4.3.3}%
-\contentsline {subsection}{\numberline {4.3.4}Phân quyền người dùng}{18}{subsection.4.3.4}%
-\contentsline {section}{\numberline {4.4}Triển khai Mobile App bằng Flutter}{18}{section.4.4}%
-\contentsline {subsection}{\numberline {4.4.1}Kiến trúc ứng dụng}{18}{subsection.4.4.1}%
-\contentsline {subsection}{\numberline {4.4.2}Quản lý state}{19}{subsection.4.4.2}%
-\contentsline {subsection}{\numberline {4.4.3}Tích hợp bản đồ}{19}{subsection.4.4.3}%
-\contentsline {subsection}{\numberline {4.4.4}Push Notification}{19}{subsection.4.4.4}%
-\contentsline {section}{\numberline {4.5}Tích hợp Real-time bằng SignalR}{19}{section.4.5}%
-\contentsline {subsection}{\numberline {4.5.1}Lý do lựa chọn SignalR}{19}{subsection.4.5.1}%
-\contentsline {subsection}{\numberline {4.5.2}Kiến trúc Hub}{19}{subsection.4.5.2}%
-\contentsline {subsection}{\numberline {4.5.3}Luồng dữ liệu real-time}{20}{subsection.4.5.3}%
-\contentsline {subsection}{\numberline {4.5.4}Xử lý mất kết nối}{20}{subsection.4.5.4}%
-\contentsline {section}{\numberline {4.6}Kết chương}{20}{section.4.6}%
-\contentsline {chapter}{\numberline {5}Triển Khai Dịch Vụ AI, QA/DevOps Và Đánh Giá Hệ Thống}{21}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Triển Khai Các Dịch Vụ AI}{21}{section.5.1}%
-\contentsline {subsection}{\numberline {5.1.1}Dịch vụ Chatbot hỗ trợ khách hàng (Customer Support Chatbot)}{21}{subsection.5.1.1}%
-\contentsline {subsection}{\numberline {5.1.2}Dịch vụ Dự đoán Thời gian Giao hàng (ETA Estimation)}{22}{subsection.5.1.2}%
-\contentsline {subsection}{\numberline {5.1.3}Dịch vụ Tóm tắt Báo cáo Vận hành (Summarization)}{22}{subsection.5.1.3}%
-\contentsline {section}{\numberline {5.2}Đóng Gói Hệ Thống Và Hạ Tầng DevOps}{22}{section.5.2}%
-\contentsline {subsection}{\numberline {5.2.1}Cấu trúc Đóng gói Docker Container}{22}{subsection.5.2.1}%
-\contentsline {subsection}{\numberline {5.2.2}Định hình tệp Dockerfile và Docker Compose}{22}{subsection.5.2.2}%
-\contentsline {section}{\numberline {5.3}Kiểm Thử Phần Mềm (Software Testing)}{23}{section.5.3}%
-\contentsline {subsection}{\numberline {5.3.1}Kế hoạch và Phương pháp Kiểm thử}{24}{subsection.5.3.1}%
-\contentsline {subsection}{\numberline {5.3.2}Bảng Kết quả Kiểm thử Tổng hợp}{24}{subsection.5.3.2}%
-\contentsline {section}{\numberline {5.4}Kết Luận Và Hướng Phát Triển}{24}{section.5.4}%
-\contentsline {subsection}{\numberline {5.4.1}Kết luận}{24}{subsection.5.4.1}%
-\contentsline {subsection}{\numberline {5.4.2}Hướng phát triển}{24}{subsection.5.4.2}%
+\contentsline {subsection}{\numberline {4.2.4}Thiết kế màn hình Web Portal}{18}{subsection.4.2.4}%
+\contentsline {section}{\numberline {4.3}Triển khai Web Portal bằng ReactJS}{18}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}Kiến trúc thư mục}{18}{subsection.4.3.1}%
+\contentsline {subsection}{\numberline {4.3.2}Các thành phần chính}{19}{subsection.4.3.2}%
+\contentsline {subsection}{\numberline {4.3.3}Quản lý state và gọi API}{19}{subsection.4.3.3}%
+\contentsline {subsection}{\numberline {4.3.4}Phân quyền người dùng}{19}{subsection.4.3.4}%
+\contentsline {section}{\numberline {4.4}Triển khai Mobile App bằng Flutter}{20}{section.4.4}%
+\contentsline {subsection}{\numberline {4.4.1}Kiến trúc ứng dụng}{20}{subsection.4.4.1}%
+\contentsline {subsection}{\numberline {4.4.2}Quản lý state}{20}{subsection.4.4.2}%
+\contentsline {subsection}{\numberline {4.4.3}Tích hợp bản đồ}{21}{subsection.4.4.3}%
+\contentsline {subsection}{\numberline {4.4.4}Push Notification}{21}{subsection.4.4.4}%
+\contentsline {section}{\numberline {4.5}Tích hợp Real-time bằng SignalR}{21}{section.4.5}%
+\contentsline {subsection}{\numberline {4.5.1}Lý do lựa chọn SignalR}{21}{subsection.4.5.1}%
+\contentsline {subsection}{\numberline {4.5.2}Kiến trúc Hub}{22}{subsection.4.5.2}%
+\contentsline {subsection}{\numberline {4.5.3}Luồng dữ liệu real-time}{22}{subsection.4.5.3}%
+\contentsline {subsection}{\numberline {4.5.4}Xử lý mất kết nối}{22}{subsection.4.5.4}%
+\contentsline {section}{\numberline {4.6}Kết chương}{22}{section.4.6}%
+\contentsline {chapter}{\numberline {5}Triển Khai Dịch Vụ AI, QA/DevOps Và Đánh Giá Hệ Thống}{23}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Triển Khai Các Dịch Vụ AI}{23}{section.5.1}%
+\contentsline {subsection}{\numberline {5.1.1}Dịch vụ Chatbot hỗ trợ khách hàng (Customer Support Chatbot)}{23}{subsection.5.1.1}%
+\contentsline {subsection}{\numberline {5.1.2}Dịch vụ Dự đoán Thời gian Giao hàng (ETA Estimation)}{24}{subsection.5.1.2}%
+\contentsline {subsection}{\numberline {5.1.3}Dịch vụ Tóm tắt Báo cáo Vận hành (Summarization)}{24}{subsection.5.1.3}%
+\contentsline {section}{\numberline {5.2}Đóng Gói Hệ Thống Và Hạ Tầng DevOps}{24}{section.5.2}%
+\contentsline {subsection}{\numberline {5.2.1}Cấu trúc Đóng gói Docker Container}{24}{subsection.5.2.1}%
+\contentsline {subsection}{\numberline {5.2.2}Định hình tệp Dockerfile và Docker Compose}{24}{subsection.5.2.2}%
+\contentsline {section}{\numberline {5.3}Kiểm Thử Phần Mềm (Software Testing)}{25}{section.5.3}%
+\contentsline {subsection}{\numberline {5.3.1}Kế hoạch và Phương pháp Kiểm thử}{26}{subsection.5.3.1}%
+\contentsline {subsection}{\numberline {5.3.2}Bảng Kết quả Kiểm thử Tổng hợp}{26}{subsection.5.3.2}%
+\contentsline {section}{\numberline {5.4}Kết Luận Và Hướng Phát Triển}{26}{section.5.4}%
+\contentsline {subsection}{\numberline {5.4.1}Kết luận}{26}{subsection.5.4.1}%
+\contentsline {subsection}{\numberline {5.4.2}Hướng phát triển}{26}{subsection.5.4.2}%

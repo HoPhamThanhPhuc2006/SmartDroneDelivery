@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.8.22)  10 SEP 2026 20:44
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.8.22)  10 SEP 2026 23:23
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -515,35 +515,70 @@ Ch\uhorn \ohorn ng 4.
 [15
 
 ]
-<images/chuong4/web-portal-dashboard.png.png, id=408, 1445.4pt x 1027.84pt>
-File: images/chuong4/web-portal-dashboard.png.png Graphic file (type png)
-<use images/chuong4/web-portal-dashboard.png.png>
-Package pdftex.def Info: images/chuong4/web-portal-dashboard.png.png  used on input line 63.
-(pdftex.def)             Requested size: 352.81552pt x 250.88983pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[16] [17
+<images/chuong4/design-system.png.png, id=408, 1465.475pt x 1224.575pt>
+File: images/chuong4/design-system.png.png Graphic file (type png)
+<use images/chuong4/design-system.png.png>
+Package pdftex.def Info: images/chuong4/design-system.png.png  used on input line 26.
+(pdftex.def)             Requested size: 352.81552pt x 294.8009pt.
+<images/chuong4/mobile-screens.png.png, id=410, 403.5075pt x 877.2775pt>
+File: images/chuong4/mobile-screens.png.png Graphic file (type png)
+<use images/chuong4/mobile-screens.png.png>
+Package pdftex.def Info: images/chuong4/mobile-screens.png.png  used on input line 45.
+(pdftex.def)             Requested size: 352.81552pt x 767.0671pt.
+ [16
 pdfTeX warning (ext4): destination with the same identifier (name{figure.4.1}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.92     \item \texttt
-                      {OrderTable}: báº£ng hiá»ƒn thá»‹ danh sÃ¡ch Ä‘Æ¡n hÃ ... <./images/chuong4/web-portal-dashboard.png.png>] [18] [19]) (../chapters/chuong5.tex [20]
+l.48 
+      <./images/chuong4/design-system.png.png>]
+Overfull \vbox (94.61124pt too high) has occurred while \output is active []
+
+ [17
+pdfTeX warning (ext4): destination with the same identifier (name{figure.4.2}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.48 
+      <./images/chuong4/mobile-screens.png.png>]
+<images/chuong4/web-portal-dashboard.png.jpg, id=423, 1370.11874pt x 634.37pt>
+File: images/chuong4/web-portal-dashboard.png.jpg Graphic file (type jpg)
+<use images/chuong4/web-portal-dashboard.png.jpg>
+Package pdftex.def Info: images/chuong4/web-portal-dashboard.png.jpg  used on input line 63.
+(pdftex.def)             Requested size: 352.81552pt x 163.3545pt.
+ [18
+pdfTeX warning (ext4): destination with the same identifier (name{figure.4.3}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.82 \end{verbatim}
+                    <./images/chuong4/web-portal-dashboard.png.jpg>] [19]
+Overfull \hbox (40.51468pt too wide) in paragraph at lines 167--167
+[]\T5/cmtt/m/n/12 class OrderTrackingBloc extends Bloc<OrderTrackingEvent, OrderTrackingState> {[] 
+ []
+
+
+Overfull \hbox (34.34119pt too wide) in paragraph at lines 167--167
+[]  \T5/cmtt/m/n/12 OrderTrackingBloc(this.trackOrderUseCase) : super(OrderTrackingInitial()) {[] 
+ []
+
+[20]
+Overfull \hbox (12.00375pt too wide) in paragraph at lines 169--170
+[]\T5/cmr/m/n/12 Ð t¦ng giao di»n, m n h¼nh theo dãi ^^_ìn h ng ch¿ c¦n l­ng nghe state qua \T5/cmtt/m/n/12 BlocBuilder
+ []
+
+[21]) (../chapters/chuong5.tex [22]
 Ch\uhorn \ohorn ng 5.
-[21
+[23
 
 ]
 Overfull \hbox (32.76387pt too wide) in paragraph at lines 35--36
 []\T5/cmr/bx/n/12 Kÿ thuªt ¡p döng: \T5/cmr/m/n/12 Mæ h¼nh Trans-former tü ch¸ b£n nhµ (Fine-tuned BART/PEGASUS)
  []
 
-[22] [23]
+[24] [25]
 Overfull \hbox (82.4507pt too wide) in paragraph at lines 108--117
  [][] 
  []
 
-) [24
+) [26
 pdfTeX warning (ext4): destination with the same identifier (name{table.5.1}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
@@ -557,17 +592,17 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: AAA377A5C9A8166EF823B40080975201;14755.
  ) 
 Here is how much of TeX's memory you used:
- 10052 strings out of 467871
- 150941 string characters out of 5435211
+ 10067 strings out of 467871
+ 151404 string characters out of 5435211
  578909 words of memory out of 5000000
- 38698 multiletter control sequences out of 15000+600000
+ 38709 multiletter control sequences out of 15000+600000
  639742 words of font info for 60 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  75i,9n,79p,854b,618s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\baong\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk><D:/Miktex/fonts/type1/public/amsfonts/cm/cmmi12.pfb><D:/Miktex/fonts/type1/public/amsfonts/cm/cmr12.pfb><D:/Miktex/fonts/type1/vntex/vnr/vnbx12.pfb><D:/Miktex/fonts/type1/vntex/vnr/vnr12.pfb><D:/Miktex/fonts/type1/vntex/vnr/vnr17.pfb><D:/Miktex/fonts/type1/vntex/vnr/vnti12.pfb><D:/Miktex/fonts/type1/vntex/vnr/vntt12.pfb>
-Output written on main.pdf (25 pages, 269681 bytes).
+Output written on main.pdf (27 pages, 1193741 bytes).
 PDF statistics:
- 511 PDF objects out of 1000 (max. 8388607)
- 101 named destinations out of 1000 (max. 500000)
- 526 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 525 PDF objects out of 1000 (max. 8388607)
+ 105 named destinations out of 1000 (max. 500000)
+ 536 words of extra memory for PDF output out of 10000 (max. 10000000)
 
