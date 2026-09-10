@@ -1,1 +1,177 @@
-﻿ 
+﻿\chapter{THIẾT KẾ GIAO DIỆN VÀ TRIỂN KHAI ỨNG DỤNG}
+
+\section{Giới thiệu chương}
+
+Chương này trình bày quá trình thiết kế giao diện người dùng và triển khai các thành phần frontend của hệ thống Smart Drone Delivery, bao gồm Web Portal dành cho quản trị viên/điều phối viên và Mobile App dành cho khách hàng. Bên cạnh đó, chương cũng trình bày cách nhóm tích hợp SignalR để hiện thực hóa tính năng theo dõi drone theo thời gian thực, vốn là một trong những yêu cầu quan trọng nhất của hệ thống.
+
+\section{Thiết kế giao diện UI/UX}
+
+\subsection{Mục tiêu thiết kế}
+
+Nhóm em thực hiện thiết kế giao diện trên Figma để thống nhất về màu sắc, bố cục và luồng thao tác giữa các thành viên, tránh tình trạng mỗi người code một kiểu giao diện khác nhau. Mục tiêu chính là giao diện phải đơn giản, dễ dùng vì đối tượng sử dụng app khách hàng có thể không rành công nghệ, còn Web Portal thì cần hiển thị được nhiều thông tin cùng lúc (bản đồ, danh sách đơn, trạng thái drone) mà vẫn rõ ràng, không rối mắt.
+
+\subsection{Design system}
+
+Nhóm xây dựng một bộ design system dùng chung cho cả Web và Mobile để đảm bảo tính đồng nhất:
+
+\begin{itemize}
+    \item Màu chủ đạo: red (thể hiện sự tin cậy, công nghệ), kết hợp với các màu trạng thái như xanh lá (đã giao thành công), vàng cam (đang giao), đỏ (lỗi/hủy đơn)
+    \item Font chữ: sử dụng font sans-serif (Inter/Roboto) cho dễ đọc trên nhiều kích thước màn hình
+    \item Các component dùng chung: Button, Card, Badge trạng thái, Input field, Modal xác nhận
+
+\end{itemize}
+
+% \begin{figure}[h]
+%     \centering
+%     \includegraphics[width=0.8\textwidth]{images/chuong4/design-system.png}
+%     \caption{Design system của hệ thống}
+% \end{figure}
+
+\subsection{Thiết kế màn hình Mobile App}
+
+Mobile App phục vụ đối tượng khách hàng, các màn hình chính bao gồm:
+
+\begin{itemize}
+    \item Màn hình Đăng nhập/Đăng ký
+    \item Màn hình Tạo đơn giao hàng: khách chọn điểm nhận và điểm giao trên bản đồ
+    \item Màn hình Theo dõi đơn hàng: hiển thị vị trí drone theo thời gian thực trên bản đồ
+    \item Màn hình Lịch sử đơn hàng
+    \item Màn hình Chatbot hỗ trợ khách hàng
+    \item Màn hình Thông báo
+\end{itemize}
+
+% \begin{figure}[h]
+%     \centering
+%     \includegraphics[width=0.8\textwidth]{images/chuong4/mobile-screens.png}
+%     \caption{Một số màn hình chính của Mobile App}
+% \end{figure}
+
+\subsection{Thiết kế màn hình Web Portal}
+
+Web Portal phục vụ đối tượng quản trị viên và điều phối viên, gồm các màn hình chính:
+
+\begin{itemize}
+    \item Dashboard: tổng quan số lượng drone đang hoạt động, số đơn đang xử lý, số đơn hoàn thành trong ngày
+    \item Bản đồ quản lý đội drone: hiển thị vị trí tất cả drone đang hoạt động trên cùng một bản đồ
+    \item Quản lý đơn hàng: danh sách đơn, trạng thái, cho phép điều phối viên can thiệp khi cần
+    \item Quản lý drone: thông tin pin, trạng thái hoạt động, lịch bảo trì
+    \item Quản lý người dùng
+\end{itemize}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.8\textwidth]{images/chuong4/web-portal-dashboard.png}
+    \caption{Giao diện Dashboard của Web Portal}
+\end{figure}
+
+\section{Triển khai Web Portal bằng ReactJS}
+
+\subsection{Kiến trúc thư mục}
+
+Nhóm tổ chức source code của Web Portal theo cấu trúc sau để dễ quản lý khi nhiều người cùng code:
+
+\begin{verbatim}
+src/
+  components/
+  pages/
+  services/
+  hooks/
+  contexts/
+  utils/
+  assets/
+\end{verbatim}
+
+Trong đó, thư mục \texttt{services} chứa các hàm gọi API xuống backend (đã thiết kế ở Chương 3), thư mục \texttt{components} chứa các thành phần giao diện dùng lại được như bảng, thẻ trạng thái, thư mục \texttt{pages} chứa các trang hoàn chỉnh tương ứng với từng route.
+
+\subsection{Các thành phần chính}
+
+Một số component quan trọng nhóm đã xây dựng:
+
+\begin{itemize}
+    \item \texttt{DroneMap}: component hiển thị bản đồ, nhận dữ liệu vị trí drone theo thời gian thực và cập nhật marker trên bản đồ
+    \item \texttt{OrderTable}: bảng hiển thị danh sách đơn hàng, hỗ trợ lọc theo trạng thái
+    \item \texttt{DroneStatusCard}: thẻ hiển thị thông tin nhanh về một drone (pin, trạng thái, đơn đang giao)
+    \item \texttt{Dashboard}: trang tổng quan, tổng hợp số liệu từ các API thống kê
+\end{itemize}
+
+\subsection{Quản lý state và gọi API}
+
+Nhóm sử dụng Context API kết hợp với custom hooks để quản lý state dùng chung như thông tin người dùng đăng nhập, danh sách drone đang hoạt động, tránh phải truyền props qua nhiều tầng component. Việc gọi API xuống backend được thực hiện qua Axios, các request đều được đính kèm JWT token trong header \texttt{Authorization} để xác thực.
+
+Ví dụ đoạn code gọi API lấy danh sách đơn hàng:
+
+\begin{verbatim}
+export const getOrders = async (status) => {
+  const response = await axiosClient.get('/api/orders', {
+    params: { status },
+  });
+  return response.data;
+};
+\end{verbatim}
+
+\subsection{Phân quyền người dùng}
+
+Web Portal có hai vai trò chính là Quản trị viên (Admin) và Điều phối viên (Dispatcher), mỗi vai trò được giới hạn truy cập vào các trang khác nhau thông qua route bảo vệ (Protected Route) dựa trên role được giải mã từ JWT token.
+
+\section{Triển khai Mobile App bằng Flutter}
+
+\subsection{Kiến trúc ứng dụng}
+
+Mobile App được xây dựng bằng Flutter, tổ chức theo hướng tách biệt các tầng để khớp với kiến trúc Clean Architecture đã trình bày ở Chương 3, gồm tầng presentation (giao diện), tầng domain (logic nghiệp vụ) và tầng data (gọi API, xử lý dữ liệu).
+
+\begin{verbatim}
+lib/
+  presentation/
+    screens/
+    widgets/
+  domain/
+    entities/
+    usecases/
+  data/
+    repositories/
+    datasources/
+\end{verbatim}
+
+\subsection{Quản lý state}
+
+Nhóm sử dụng thư viện quản lý state (Provider/BLoC) để tách biệt logic xử lý ra khỏi giao diện, giúp việc cập nhật vị trí drone theo thời gian thực không làm ảnh hưởng đến các phần khác của màn hình.
+
+\subsection{Tích hợp bản đồ}
+
+Màn hình theo dõi đơn hàng sử dụng Google Maps SDK để hiển thị bản đồ, vị trí drone được vẽ dưới dạng marker và cập nhật liên tục khi có dữ liệu mới gửi về từ server.
+
+\subsection{Push Notification}
+
+Ứng dụng tích hợp Firebase Cloud Messaging để gửi thông báo đẩy cho khách hàng khi trạng thái đơn hàng thay đổi, ví dụ như khi drone bắt đầu giao hàng hoặc đã giao hàng thành công.
+
+\section{Tích hợp Real-time bằng SignalR}
+
+\subsection{Lý do lựa chọn SignalR}
+
+Ban đầu nhóm có cân nhắc dùng cách polling, tức là client tự động gọi API liên tục để hỏi vị trí drone mới nhất, nhưng cách này gây tốn tài nguyên server và độ trễ hiển thị không tốt. Vì vậy nhóm quyết định sử dụng SignalR để server có thể chủ động đẩy dữ liệu xuống client ngay khi có cập nhật, giúp việc theo dõi drone mượt mà và gần như tức thời hơn.
+
+\subsection{Kiến trúc Hub}
+
+Nhóm xây dựng một Hub tên là \texttt{DroneTrackingHub}, client sẽ subscribe vào một nhóm (group) tương ứng với mã đơn hàng (\texttt{orderId}) mà mình đang theo dõi. Khi drone gửi vị trí GPS mới về server, backend sẽ xử lý và broadcast dữ liệu này đến đúng nhóm client đang theo dõi đơn hàng đó, thay vì gửi cho tất cả mọi người.
+
+\begin{verbatim}
+public class DroneTrackingHub : Hub
+{
+    public async Task JoinOrderGroup(string orderId)
+    {
+        await Groups.AddToGroupAsync(Context.ConnectionId, orderId);
+    }
+}
+\end{verbatim}
+
+\subsection{Luồng dữ liệu real-time}
+
+Luồng cập nhật vị trí drone diễn ra như sau: drone định kỳ gửi tọa độ GPS về backend, backend nhận dữ liệu, xử lý và gọi đến \texttt{DroneTrackingHub} để broadcast xuống các client (cả Web Portal và Mobile App) đang lắng nghe nhóm đơn hàng tương ứng, sau đó client nhận dữ liệu và cập nhật vị trí marker trên bản đồ theo thời gian thực.
+
+\subsection{Xử lý mất kết nối}
+
+Vì drone hoạt động ngoài trời nên có khả năng gặp tình trạng mất sóng tạm thời, nhóm đã cấu hình cơ chế tự động kết nối lại (automatic reconnect) của SignalR ở phía client để đảm bảo khi mạng ổn định trở lại thì việc theo dõi vẫn được tiếp tục mà người dùng không cần tự tải lại trang hoặc mở lại ứng dụng.
+
+\section{Kết chương}
+
+Qua chương này, nhóm em đã trình bày quá trình thiết kế giao diện và triển khai hai nền tảng Web Portal, Mobile App, cùng với việc tích hợp SignalR để hiện thực hóa tính năng theo dõi drone theo thời gian thực. Đây là phần trực tiếp tương tác với người dùng cuối nên nhóm đã cố gắng cân bằng giữa tính thẩm mỹ và tính dễ sử dụng của giao diện.
