@@ -14,7 +14,7 @@ Nhóm em thực hiện thiết kế giao diện trên Figma để thống nhất
 
 Nhóm xây dựng một bộ design system dùng chung cho cả Web và Mobile để đảm bảo tính đồng nhất:
 
-\begin{itemize}
+\begin{itemize}[label={}]
     \item Màu chủ đạo: red (thể hiện sự tin cậy, công nghệ), kết hợp với các màu trạng thái như xanh lá (đã giao thành công), vàng cam (đang giao), đỏ (lỗi/hủy đơn)
     \item Font chữ: sử dụng font sans-serif (Inter/Roboto) cho dễ đọc trên nhiều kích thước màn hình
     \item Các component dùng chung: Button, Card, Badge trạng thái, Input field, Modal xác nhận
@@ -31,7 +31,7 @@ Nhóm xây dựng một bộ design system dùng chung cho cả Web và Mobile �
 
 Mobile App phục vụ đối tượng khách hàng, các màn hình chính bao gồm:
 
-\begin{itemize}
+\begin{itemize}[label={}]
     \item Màn hình Đăng nhập/Đăng ký
     \item Màn hình Tạo đơn giao hàng: khách chọn điểm nhận và điểm giao trên bản đồ
     \item Màn hình Theo dõi đơn hàng: hiển thị vị trí drone theo thời gian thực trên bản đồ
@@ -50,7 +50,7 @@ Mobile App phục vụ đối tượng khách hàng, các màn hình chính bao 
 
 Web Portal phục vụ đối tượng quản trị viên và điều phối viên, gồm các màn hình chính:
 
-\begin{itemize}
+\begin{itemize}[label={}]
     \item Dashboard: tổng quan số lượng drone đang hoạt động, số đơn đang xử lý, số đơn hoàn thành trong ngày
     \item Bản đồ quản lý đội drone: hiển thị vị trí tất cả drone đang hoạt động trên cùng một bản đồ
     \item Quản lý đơn hàng: danh sách đơn, trạng thái, cho phép điều phối viên can thiệp khi cần
@@ -87,7 +87,7 @@ Trong đó, thư mục \texttt{services} chứa các hàm gọi API xuống back
 
 Một số component quan trọng nhóm đã xây dựng:
 
-\begin{itemize}
+\begin{itemize}[label={}]
     \item \texttt{DroneMap}: component hiển thị bản đồ, nhận dữ liệu vị trí drone theo thời gian thực và cập nhật marker trên bản đồ
     \item \texttt{OrderTable}: bảng hiển thị danh sách đơn hàng, hỗ trợ lọc theo trạng thái
     \item \texttt{DroneStatusCard}: thẻ hiển thị thông tin nhanh về một drone (pin, trạng thái, đơn đang giao)

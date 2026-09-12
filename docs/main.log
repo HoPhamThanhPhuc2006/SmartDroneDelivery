@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.8.22)  10 SEP 2026 23:23
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.8.22)  12 SEP 2026 12:20
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -343,52 +343,60 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \@floatcapt=\box54
 ) (D:\Miktex\tex/latex/placeins\placeins.sty
 Package: placeins 2005/04/18  v 2.2
+) (D:\Miktex\tex/latex/enumitem\enumitem.sty
+Package: enumitem 2025/02/06 v3.11 Customized lists
+\labelindent=\skip52
+\enit@outerparindent=\dimen163
+\enit@toks=\toks23
+\enit@inbox=\box55
+\enit@count@id=\count300
+\enitdp@description=\count301
 ) (D:\Miktex\tex/latex/l3backend\l3backend-pdftex.def
 File: l3backend-pdftex.def 2025-10-09 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count300
+\l__color_backend_stack_int=\count302
 ) (main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for T5/cmr/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for T5/cmr/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
  (D:\Miktex\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count301
-\scratchdimen=\dimen163
-\scratchbox=\box55
-\nofMPsegments=\count302
-\nofMParguments=\count303
-\everyMPshowfont=\toks23
-\MPscratchCnt=\count304
-\MPscratchDim=\dimen164
-\MPnumerator=\count305
-\makeMPintoPDFobject=\count306
-\everyMPtoPDFconversion=\toks24
+\scratchcounter=\count303
+\scratchdimen=\dimen164
+\scratchbox=\box56
+\nofMPsegments=\count304
+\nofMParguments=\count305
+\everyMPshowfont=\toks24
+\MPscratchCnt=\count306
+\MPscratchDim=\dimen165
+\MPnumerator=\count307
+\makeMPintoPDFobject=\count308
+\everyMPtoPDFconversion=\toks25
 ) (D:\Miktex\tex/latex/epstopdf-pkg\epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
  (D:\Miktex\tex/latex/00miktex\epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
-Package hyperref Info: Link coloring OFF on input line 20.
+Package hyperref Info: Link coloring OFF on input line 21.
  (main.out) (main.out)
 \@outlinefile=\write3
 \openout3 = `main.out'.
@@ -515,12 +523,12 @@ Ch\uhorn \ohorn ng 4.
 [15
 
 ]
-<images/chuong4/design-system.png.png, id=408, 1465.475pt x 1224.575pt>
+<images/chuong4/design-system.png.png, id=407, 1465.475pt x 1224.575pt>
 File: images/chuong4/design-system.png.png Graphic file (type png)
 <use images/chuong4/design-system.png.png>
 Package pdftex.def Info: images/chuong4/design-system.png.png  used on input line 26.
 (pdftex.def)             Requested size: 352.81552pt x 294.8009pt.
-<images/chuong4/mobile-screens.png.png, id=410, 403.5075pt x 877.2775pt>
+<images/chuong4/mobile-screens.png.png, id=409, 403.5075pt x 877.2775pt>
 File: images/chuong4/mobile-screens.png.png Graphic file (type png)
 <use images/chuong4/mobile-screens.png.png>
 Package pdftex.def Info: images/chuong4/mobile-screens.png.png  used on input line 45.
@@ -539,7 +547,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.4.2}) h
                                                   \__shipout_drop_firstpage_...
 l.48 
       <./images/chuong4/mobile-screens.png.png>]
-<images/chuong4/web-portal-dashboard.png.jpg, id=423, 1370.11874pt x 634.37pt>
+<images/chuong4/web-portal-dashboard.png.jpg, id=422, 1370.11874pt x 634.37pt>
 File: images/chuong4/web-portal-dashboard.png.jpg Graphic file (type jpg)
 <use images/chuong4/web-portal-dashboard.png.jpg>
 Package pdftex.def Info: images/chuong4/web-portal-dashboard.png.jpg  used on input line 63.
@@ -582,7 +590,7 @@ Overfull \hbox (82.4507pt too wide) in paragraph at lines 108--117
 pdfTeX warning (ext4): destination with the same identifier (name{table.5.1}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.52 \end{document}
+l.53 \end{document}
                    ] (main.aux)
  ***********
 LaTeX2e <2025-11-01>
@@ -592,17 +600,17 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: AAA377A5C9A8166EF823B40080975201;14755.
  ) 
 Here is how much of TeX's memory you used:
- 10067 strings out of 467871
- 151404 string characters out of 5435211
- 578909 words of memory out of 5000000
- 38709 multiletter control sequences out of 15000+600000
- 639742 words of font info for 60 fonts, out of 8000000 for 9000
+ 10394 strings out of 467871
+ 156986 string characters out of 5435211
+ 586569 words of memory out of 5000000
+ 39033 multiletter control sequences out of 15000+600000
+ 639405 words of font info for 59 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,9n,79p,854b,618s stack positions out of 10000i,1000n,20000p,200000b,200000s
- <C:\Users\baong\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk><D:/Miktex/fonts/type1/public/amsfonts/cm/cmmi12.pfb><D:/Miktex/fonts/type1/public/amsfonts/cm/cmr12.pfb><D:/Miktex/fonts/type1/vntex/vnr/vnbx12.pfb><D:/Miktex/fonts/type1/vntex/vnr/vnr12.pfb><D:/Miktex/fonts/type1/vntex/vnr/vnr17.pfb><D:/Miktex/fonts/type1/vntex/vnr/vnti12.pfb><D:/Miktex/fonts/type1/vntex/vnr/vntt12.pfb>
-Output written on main.pdf (27 pages, 1193741 bytes).
+ 75i,9n,79p,854b,621s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<D:/Miktex/fonts/type1/public/amsfonts/cm/cmmi12.pfb><D:/Miktex/fonts/type1/public/amsfonts/cm/cmr12.pfb><D:/Miktex/fonts/type1/vntex/vnr/vnbx12.pfb><D:/Miktex/fonts/type1/vntex/vnr/vnr12.pfb><D:/Miktex/fonts/type1/vntex/vnr/vnr17.pfb><D:/Miktex/fonts/type1/vntex/vnr/vnti12.pfb><D:/Miktex/fonts/type1/vntex/vnr/vntt12.pfb>
+Output written on main.pdf (27 pages, 1192799 bytes).
 PDF statistics:
- 525 PDF objects out of 1000 (max. 8388607)
+ 520 PDF objects out of 1000 (max. 8388607)
  105 named destinations out of 1000 (max. 500000)
  536 words of extra memory for PDF output out of 10000 (max. 10000000)
 
