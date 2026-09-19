@@ -1,0 +1,9 @@
+C:\Users\admin\Downloads\SmartDroneDelivery-main\SmartDroneDelivery-main\src\backend\SmartDroneDelivery.API\obj\Debug\net9.0\SmartDroneDelivery.API.csproj.AssemblyReference.cache
+C:\Users\admin\Downloads\SmartDroneDelivery-main\SmartDroneDelivery-main\src\backend\SmartDroneDelivery.API\obj\Debug\net9.0\rpswa.dswa.cache.json
+C:\Users\admin\Downloads\SmartDroneDelivery-main\SmartDroneDelivery-main\src\backend\SmartDroneDelivery.API\obj\Debug\net9.0\SmartDroneDelivery.API.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\admin\Downloads\SmartDroneDelivery-main\SmartDroneDelivery-main\src\backend\SmartDroneDelivery.API\obj\Debug\net9.0\SmartDroneDelivery.API.AssemblyInfoInputs.cache
+C:\Users\admin\Downloads\SmartDroneDelivery-main\SmartDroneDelivery-main\src\backend\SmartDroneDelivery.API\obj\Debug\net9.0\SmartDroneDelivery.API.AssemblyInfo.cs
+C:\Users\admin\Downloads\SmartDroneDelivery-main\SmartDroneDelivery-main\src\backend\SmartDroneDelivery.API\obj\Debug\net9.0\SmartDroneDelivery.API.csproj.CoreCompileInputs.cache
+C:\Users\admin\Downloads\SmartDroneDelivery-main\SmartDroneDelivery-main\src\backend\SmartDroneDelivery.API\obj\Debug\net9.0\SmartDroneDelivery.API.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\admin\Downloads\SmartDroneDelivery-main\SmartDroneDelivery-main\src\backend\SmartDroneDelivery.API\obj\Debug\net9.0\SmartDroneDelivery.API.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\admin\Downloads\SmartDroneDelivery-main\SmartDroneDelivery-main\src\backend\SmartDroneDelivery.API\obj\Debug\net9.0\SmartDroneDelivery.API.sourcelink.json

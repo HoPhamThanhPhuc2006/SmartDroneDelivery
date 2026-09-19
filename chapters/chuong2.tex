@@ -1,0 +1,79 @@
+﻿\chapter{PHÂN TÍCH YÊU CẦU HỆ THỐNG}
+
+\section{Phân tích yêu cầu hệ thống}
+
+\subsection{Yêu cầu chức năng}
+
+Hệ thống Smart Drone Delivery Management Platform cần đáp ứng các yêu cầu chức năng sau.
+
+\textbf{Quản lý thông tin khách hàng:} Hệ thống cho phép khách hàng đăng ký tài khoản, đăng nhập và cập nhật thông tin cá nhân nhằm phục vụ quá trình sử dụng dịch vụ.
+
+\textbf{Quản lý yêu cầu giao hàng:} Khách hàng có thể tạo mới, chỉnh sửa và theo dõi yêu cầu giao hàng với đầy đủ thông tin về người gửi, người nhận và địa điểm giao nhận.
+
+\textbf{Quản lý kiện hàng:} Hệ thống lưu trữ các thông tin của kiện hàng như khối lượng, kích thước, loại hàng hóa và địa điểm nhận, địa điểm giao.
+
+\textbf{Phân công drone:} Hệ thống hỗ trợ phân công drone phù hợp để thực hiện giao hàng dựa trên trạng thái hoạt động và khả năng vận chuyển của từng drone.
+
+\textbf{Theo dõi giao hàng:} Khách hàng có thể theo dõi trạng thái đơn hàng và vị trí của drone theo thời gian thực.
+
+\textbf{Xác nhận giao hàng:} Sau khi hoàn tất quá trình giao hàng, khách hàng xác nhận đã nhận hàng và hệ thống cập nhật trạng thái đơn hàng.
+
+\textbf{Quản lý trạm drone:} Hệ thống quản lý thông tin các trạm cất cánh và hạ cánh của drone nhằm hỗ trợ quá trình điều phối.
+
+\textbf{Quản lý đội drone:} Theo dõi tình trạng hoạt động, bảo trì và khả năng vận chuyển của từng drone.
+
+\textbf{Thống kê và báo cáo:} Cung cấp các báo cáo về số lượng đơn hàng, doanh thu, hiệu suất hoạt động và tình trạng sử dụng drone.
+
+\textbf{Quản lý người dùng:} Quản trị viên có thể quản lý tài khoản và phân quyền cho từng nhóm người dùng.
+
+\subsection{Yêu cầu phi chức năng}
+
+Bên cạnh các yêu cầu chức năng, hệ thống cần đáp ứng các yêu cầu phi chức năng sau.
+
+\textbf{Hiệu năng:} Hệ thống phải có thời gian phản hồi nhanh, đảm bảo xử lý các thao tác thông thường trong thời gian ngắn.
+
+\textbf{Bảo mật:} Thông tin người dùng được bảo vệ thông qua cơ chế xác thực và phân quyền truy cập.
+
+\textbf{Độ tin cậy:} Hệ thống hoạt động ổn định, hạn chế lỗi và đảm bảo tính sẵn sàng trong quá trình vận hành.
+
+\textbf{Khả năng mở rộng:} Hệ thống có thể mở rộng khi số lượng người dùng, drone và đơn hàng tăng lên.
+
+\textbf{Khả năng bảo trì:} Dễ dàng cập nhật, nâng cấp và sửa lỗi mà không ảnh hưởng đến toàn bộ hệ thống.
+
+\textbf{An toàn dữ liệu:} Dữ liệu được sao lưu định kỳ nhằm hạn chế rủi ro mất mát thông tin.
+
+\section{Sơ đồ Use Case}
+
+Hệ thống gồm năm tác nhân chính là Khách hàng (Customer), Nhân viên điều phối (Dispatcher), Nhân viên trạm (Station Operator), Quản lý Logistics và Quản trị viên (Administrator).
+
+Các chức năng chính của hệ thống bao gồm đăng ký tài khoản, đăng nhập, tạo yêu cầu giao hàng, quản lý kiện hàng, phân công drone, theo dõi trạng thái giao hàng, xác nhận giao hàng, quản lý drone, quản lý trạm, thống kê báo cáo và quản lý người dùng.
+
+\section{Mô hình hóa quy trình nghiệp vụ (BPMN)}
+
+\subsection{Luồng 1: Quản lý yêu cầu giao hàng}
+
+Khách hàng đăng nhập vào hệ thống và nhập thông tin đơn hàng. Hệ thống kiểm tra tính hợp lệ của dữ liệu, sau đó tạo yêu cầu giao hàng và chuyển đến nhân viên điều phối để xử lý.
+
+\subsection{Luồng 2: Quản lý kiện hàng}
+
+Nhân viên tiếp nhận kiện hàng, kiểm tra khối lượng và kích thước, cập nhật thông tin vào hệ thống và chờ phân công drone thực hiện giao hàng.
+
+\subsection{Luồng 3: Thực hiện giao hàng bằng drone}
+
+Nhân viên điều phối lựa chọn drone phù hợp và gửi lệnh thực hiện giao hàng. Drone cất cánh, di chuyển đến địa điểm giao và hoàn thành việc giao kiện hàng cho khách hàng.
+
+\subsection{Luồng 4: Theo dõi trạng thái giao hàng}
+
+Trong quá trình vận chuyển, drone liên tục gửi dữ liệu vị trí GPS về hệ thống. Hệ thống cập nhật trạng thái giao hàng để khách hàng có thể theo dõi theo thời gian thực.
+
+\subsection{Luồng 5: Xác nhận hoàn thành giao hàng}
+
+Sau khi giao hàng thành công, khách hàng xác nhận đã nhận hàng. Hệ thống cập nhật trạng thái đơn hàng là ``Hoàn thành'' và lưu trữ lịch sử giao hàng.
+
+\section{Thiết kế giao diện người dùng (UI)}
+
+Hệ thống được thiết kế với các giao diện chính gồm màn hình đăng nhập, màn hình đăng ký, trang chủ, giao diện tạo yêu cầu giao hàng, danh sách đơn hàng, theo dõi vị trí drone, quản lý drone, quản lý trạm, thống kê báo cáo và giao diện quản trị hệ thống. Các giao diện được thiết kế đơn giản, trực quan và dễ sử dụng.
+
+\section{Thiết kế trải nghiệm người dùng (UX)}
+
+Trải nghiệm người dùng được xây dựng theo hướng đơn giản và thuận tiện. Quy trình tạo đơn hàng được rút gọn nhằm giảm số bước thao tác. Hệ thống hiển thị trạng thái giao hàng theo thời gian thực, đảm bảo giao diện thống nhất trên các màn hình và hỗ trợ sử dụng trên cả máy tính lẫn thiết bị di động.

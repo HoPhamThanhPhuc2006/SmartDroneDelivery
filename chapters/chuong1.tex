@@ -1,0 +1,26 @@
+﻿\chapter{TỔNG QUAN VỀ ĐỀ TÀI}
+
+\section{Lý do chọn đề tài}
+Trong những năm gần đây, sự bùng nổ của thương mại điện tử đã kéo theo nhu cầu vận chuyển hàng hóa tăng cao đột biến. Tuy nhiên, mô hình giao hàng truyền thống bằng xe máy tại các đô thị lớn đang đối mặt với nhiều thách thức nghiêm trọng như tình trạng ùn tắc giao thông kéo dài, chi phí vận hành gia tăng và mức độ ô nhiễm môi trường ngày càng vượt ngưỡng cho phép. Đặc biệt, đối với các đơn hàng cần thời gian vận chuyển nhanh như vật tư y tế khẩn cấp, tài liệu quan trọng hay thực phẩm tươi sống, phương thức giao hàng đường bộ thường khó đảm bảo được mốc thời gian cam kết.
+
+Sự phát triển của công nghệ tự động hóa và thiết bị bay không người lái mở ra một hướng tiếp cận hoàn toàn mới cho bài toán giao hàng chặng cuối. Khả năng di chuyển linh hoạt trên không giúp thiết bị dễ dàng vượt qua các điểm nghẽn giao thông mặt đất, rút ngắn tối đa thời gian vận chuyển và giảm thiểu chi phí nhân công. Xuất phát từ thực tiễn đó, nhóm nghiên cứu lựa chọn thực hiện đề tài xây dựng hệ thống quản lý và điều hành giao hàng bằng thiết bị bay thông minh nhằm giải quyết triệt để các hạn chế của mô hình vận chuyển hiện hành.
+
+\section{Khảo sát hiện trạng}
+Thực tế khảo sát tại thị trường Việt Nam cho thấy, các đơn vị vận tải hiện nay vẫn phụ thuộc gần như hoàn toàn vào đội ngũ tài xế công nghệ. Phương thức này bộc lộ rõ nhược điểm khi phụ thuộc lớn vào mật độ giao thông theo từng khung giờ trong ngày, dẫn đến năng suất lao động giảm mạnh vào các giờ cao điểm. Đồng thời, việc biến động giá nhiên liệu và chi phí nhân công cũng tạo ra áp lực tài chính không nhỏ lên các doanh nghiệp vận tải.
+
+Trên thế giới, những tập đoàn công nghệ lớn đã triển khai thử nghiệm thành công mô hình giao hàng bằng thiết bị bay tại một số khu vực. Mặc dù vậy, tại thị trường trong nước, các giải pháp phần mềm mang tính hệ thống nhằm điều hành, giám sát hạm đội thiết bị tập trung và kết nối đa nền tảng vẫn chưa được nghiên cứu toàn diện. Việc xây dựng một giải pháp phần mềm làm chủ quy trình vận hành này là đòi hỏi cấp thiết.
+
+\section{Mục tiêu nghiên cứu}
+Đề tài hướng đến mục tiêu thiết kế và triển khai một hệ thống phần mềm toàn diện nhằm quản lý khép kín quy trình giao hàng. Về mặt hạ tầng máy chủ, hệ thống xây dựng nền tảng dịch vụ backend dựa trên framework ASP.NET Core kết hợp cơ sở dữ liệu PostgreSQL để lưu trữ, xử lý thông tin người dùng, đơn hàng và quản lý trạng thái của danh sách thiết bị bay.
+
+Ở góc độ điều hành và tương tác người dùng, dự án phát triển cổng thông tin quản trị bằng ReactJS, tích hợp bản đồ số để hỗ trợ nhân viên giám sát tọa độ di chuyển của hạm đội thiết bị theo thời gian thực. Đồng thời, ứng dụng di động xây dựng trên nền tảng Flutter cho phép người dùng cuối chủ động đặt đơn, theo dõi lộ trình bay và nhận thông báo khi hàng tới điểm đích. Ngoài ra, hệ thống cũng tích hợp thuật toán ước tính thời gian giao hàng cùng công cụ hỗ trợ giải đáp thắc mắc tự động cho khách hàng.
+
+\section{Phạm vi của đồ án}
+Về mặt nghiệp vụ, dự án tập trung xử lý luồng giao hàng chặng cuối đối với các kiện hàng có khối lượng nhỏ và vừa, hoạt động trong bán kính thử nghiệm cho phép của trạm điều hành. 
+
+Về mặt kỹ thuật, hệ thống sử dụng framework ASP.NET Core phiên bản mới nhất cho phần máy chủ, kết hợp công nghệ SignalR để truyền nhận dữ liệu vị trí theo thời gian thực. Trang quản trị sử dụng ReactJS kết hợp thư viện Leaflet cho việc hiển thị bản đồ. Ứng dụng di động được hoàn thiện bằng Flutter nhằm hỗ trợ tốt trên hệ điều hành Android. Toàn bộ giải pháp được đóng gói và triển khai trên môi trường Docker để đảm bảo tính đóng gói và khả năng mở rộng trong tương lai.
+
+\section{Phương pháp thực hiện}
+Quá trình nghiên cứu và phát triển đề tài được tiến hành qua nhiều giai đoạn có tính kết nối chặt chẽ. Ban đầu, nhóm tiến hành khảo sát yêu cầu thực tế, xây dựng mô hình dữ liệu tổng thể và thiết kế chi tiết luồng nghiệp vụ của từng thành phần trong hệ thống.
+
+Để quản lý dự án hiệu quả, nhóm áp dụng công cụ Git và GitHub nhằm đồng bộ mã nguồn giữa các thành viên, tránh tình trạng xung đột trong quá trình phát triển. Cấu trúc thư mục của dự án được phân chia rõ ràng với thư mục lưu trữ riêng cho tài liệu báo cáo và thư mục chứa mã nguồn ứng dụng, giúp việc lập trình và hoàn thiện báo cáo được thực hiện song song một cách khoa học.
