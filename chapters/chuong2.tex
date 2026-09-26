@@ -1,4 +1,4 @@
-﻿\chapter{PHÂN TÍCH YÊU CẦU HỆ THỐNG}
+\chapter{PHÂN TÍCH YÊU CẦU HỆ THỐNG}
 
 \section{Phân tích yêu cầu hệ thống}
 
@@ -48,6 +48,13 @@ Hệ thống gồm năm tác nhân chính là Khách hàng (Customer), Nhân vi�
 
 Các chức năng chính của hệ thống bao gồm đăng ký tài khoản, đăng nhập, tạo yêu cầu giao hàng, quản lý kiện hàng, phân công drone, theo dõi trạng thái giao hàng, xác nhận giao hàng, quản lý drone, quản lý trạm, thống kê báo cáo và quản lý người dùng.
 
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.88\textwidth]{images/chuong2/usecase.png}
+    \caption{Sơ đồ Use Case của hệ thống SmartDroneDelivery}
+    \label{fig:usecase}
+\end{figure}
+
 \section{Mô hình hóa quy trình nghiệp vụ (BPMN)}
 
 \subsection{Luồng 1: Quản lý yêu cầu giao hàng}
@@ -70,9 +77,37 @@ Trong quá trình vận chuyển, drone liên tục gửi dữ liệu vị trí 
 
 Sau khi giao hàng thành công, khách hàng xác nhận đã nhận hàng. Hệ thống cập nhật trạng thái đơn hàng là ``Hoàn thành'' và lưu trữ lịch sử giao hàng.
 
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.95\textwidth]{images/chuong2/bpmn.png}
+    \caption{Mô hình hóa quy trình nghiệp vụ giao hàng bằng drone}
+    \label{fig:bpmn}
+\end{figure}
+
 \section{Thiết kế giao diện người dùng (UI)}
 
 Hệ thống được thiết kế với các giao diện chính gồm màn hình đăng nhập, màn hình đăng ký, trang chủ, giao diện tạo yêu cầu giao hàng, danh sách đơn hàng, theo dõi vị trí drone, quản lý drone, quản lý trạm, thống kê báo cáo và giao diện quản trị hệ thống. Các giao diện được thiết kế đơn giản, trực quan và dễ sử dụng.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.82\textwidth]{images/chuong4/design-system.png.png}
+    \caption{Thiết kế hệ thống giao diện SmartDroneDelivery}
+    \label{fig:design-system}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.82\textwidth]{images/chuong4/mobile-screens.png.png}
+    \caption{Thiết kế giao diện trên thiết bị di động}
+    \label{fig:mobile-ui}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.82\textwidth]{images/chuong4/web-portal-dashboard.png.jpg}
+    \caption{Giao diện dashboard quản lý trên nền web}
+    \label{fig:web-dashboard}
+\end{figure}
 
 \section{Thiết kế trải nghiệm người dùng (UX)}
 
