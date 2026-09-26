@@ -3033,11 +3033,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\admin\\Downloads\\SmartDroneDelivery-main\\src\\backend\\SmartDroneDelivery.API\\SmartDroneDelivery.API.csproj",
+      "projectUniqueName": "C:\\SmartDroneDelivery-main\\src\\backend\\SmartDroneDelivery.API\\SmartDroneDelivery.API.csproj",
       "projectName": "SmartDroneDelivery.API",
-      "projectPath": "C:\\Users\\admin\\Downloads\\SmartDroneDelivery-main\\src\\backend\\SmartDroneDelivery.API\\SmartDroneDelivery.API.csproj",
+      "projectPath": "C:\\SmartDroneDelivery-main\\src\\backend\\SmartDroneDelivery.API\\SmartDroneDelivery.API.csproj",
       "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\admin\\Downloads\\SmartDroneDelivery-main\\src\\backend\\SmartDroneDelivery.API\\obj\\",
+      "outputPath": "C:\\SmartDroneDelivery-main\\src\\backend\\SmartDroneDelivery.API\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\admin\\AppData\\Roaming\\NuGet\\NuGet.Config"

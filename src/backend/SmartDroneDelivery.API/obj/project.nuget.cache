@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "IQ3tOfirQRo=",
+  "dgSpecHash": "7dQRbdvXZ+A=",
   "success": true,
-  "projectFilePath": "C:\\Users\\admin\\Downloads\\SmartDroneDelivery-main\\src\\backend\\SmartDroneDelivery.API\\SmartDroneDelivery.API.csproj",
+  "projectFilePath": "C:\\SmartDroneDelivery-main\\src\\backend\\SmartDroneDelivery.API\\SmartDroneDelivery.API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\admin\\.nuget\\packages\\bcrypt.net-next\\4.2.0\\bcrypt.net-next.4.2.0.nupkg.sha512",
     "C:\\Users\\admin\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
